@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-11-24T01:14:34.912Z</updated>
+  <updated>2024-03-30T15:07:16.320Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2024/03/30/%E8%AE%A1%E7%AE%97%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2%E9%95%BF%E5%BA%A6/"/>
+    <id>http://example.com/2024/03/30/%E8%AE%A1%E7%AE%97%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2%E9%95%BF%E5%BA%A6/</id>
+    <published>2024-03-30T15:07:39.277Z</published>
+    <updated>2024-03-30T15:07:16.320Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><code class="hljs Java"><span class="hljs-keyword">import</span> sun.security.util.Length;<br><br><span class="hljs-keyword">import</span> java.util.Scanner;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">LongestString</span> &#123;<br>    <span class="hljs-comment">//自己输入用例来判断，或者用已存在的进行输入</span><br>    <span class="hljs-comment">//第一步写他的方法</span><br>    <span class="hljs-comment">// 最长回文子串：比如</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span>&#123;<br><span class="hljs-comment">//方法一:自己输入用例输入</span><br><span class="hljs-comment">//        Scanner scanner =new Scanner(System.in);</span><br><span class="hljs-comment">//        String input =scanner.nextLine();</span><br><span class="hljs-comment">//        System.out.println(&quot;最长回文子串:&quot;+lengthOfLongestString(input));</span><br><span class="hljs-comment">//        int length=lengthOfLongestString(input).length();</span><br><span class="hljs-comment">//        System.out.println(&quot;最长回文子串的长度为：&quot;+length);</span><br><span class="hljs-comment">//方法二:自己设置样例</span><br>          String s=<span class="hljs-string">&quot;12345654&quot;</span>;<br>        System.out.println(<span class="hljs-string">&quot;最长回文子串:&quot;</span>+lengthOfLongestString(s));<br>        System.out.println(<span class="hljs-string">&quot;最长回文子串的长度：&quot;</span>+lengthOfLongestString(s).length());<br>    &#125;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title function_">lengthOfLongestString</span><span class="hljs-params">(String s)</span>&#123;<br>        <span class="hljs-keyword">if</span>(s==<span class="hljs-literal">null</span> || s.length()==<span class="hljs-number">0</span>)&#123;<br>            <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;&quot;</span>;<br>        &#125;<br>        <span class="hljs-type">int</span> start=<span class="hljs-number">0</span>;<br>        <span class="hljs-type">int</span> end=<span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;s.length();i++)&#123;<br>            <span class="hljs-comment">//expandAround函数的作用是向两边拓展，以找到以当前字符为中心的最长回文子串长度</span><br>            <span class="hljs-type">int</span> len1=expandAroundCenter(s,i,i);<span class="hljs-comment">//处理奇数长度的回文子串</span><br>            <span class="hljs-type">int</span> len2=expandAroundCenter(s,i,i+<span class="hljs-number">1</span>);<span class="hljs-comment">//处理偶数长度的回文子串</span><br>            <span class="hljs-type">int</span> len=Math.max(len2,len1);<br>            <span class="hljs-keyword">if</span>(len&gt;end-start)&#123;<br>                <span class="hljs-comment">//用于更新长度</span><br>                <span class="hljs-comment">//对于奇数长度的回文子串,中心字符本身就属于回文子串:所以起始位置是i-(len-1)/2</span><br>                start =i-(len-<span class="hljs-number">1</span>)/<span class="hljs-number">2</span>;<span class="hljs-comment">//想下取整</span><br>                end = i +len/<span class="hljs-number">2</span>;<span class="hljs-comment">//向上取整</span><br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> s.substring(start,end+<span class="hljs-number">1</span>);<br>    &#125;<br><br>    <span class="hljs-comment">/**</span><br><span class="hljs-comment">     * 计算回文子串的长度,从中间向两边拓展</span><br><span class="hljs-comment">     * <span class="hljs-doctag">@param</span> s</span><br><span class="hljs-comment">     * <span class="hljs-doctag">@param</span> left</span><br><span class="hljs-comment">     * <span class="hljs-doctag">@param</span> right</span><br><span class="hljs-comment">     * <span class="hljs-doctag">@return</span></span><br><span class="hljs-comment">     */</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> <span class="hljs-title function_">expandAroundCenter</span><span class="hljs-params">(String s,<span class="hljs-type">int</span> left,<span class="hljs-type">int</span> right)</span>&#123;<br>        <span class="hljs-type">int</span> L=left;<br>        <span class="hljs-type">int</span> R=right;<br>        <span class="hljs-type">int</span> length=<span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">while</span>(L&gt;=<span class="hljs-number">0</span> &amp;&amp; R&lt;s.length() &amp;&amp; s.charAt(L)==s.charAt(R))&#123;<br>            <span class="hljs-comment">//s.chatAt(i):获取s在i位置的字符</span><br>            L--;<br>            R++;<br>        &#125;<br>        length=R-L-<span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">return</span>  length;<br>    &#125;<br><br><br>&#125;<br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>第一篇博客</title>
@@ -34,9 +54,9 @@
     <link href="http://example.com/2023/11/24/%E4%B8%AD%E5%8D%88%E5%A5%BD/"/>
     <id>http://example.com/2023/11/24/%E4%B8%AD%E5%8D%88%E5%A5%BD/</id>
     <published>2023-11-24T01:04:08.000Z</published>
-    <updated>2023-11-24T09:58:43.325Z</updated>
+    <updated>2023-11-24T10:00:33.060Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="/2023/11/24/%E4%B8%AD%E5%8D%88%E5%A5%BD/1.png"></p><p><img src="/2023/11/24/%E4%B8%AD%E5%8D%88%E5%A5%BD/%E4%B8%AD%E5%8D%88%E5%A5%BD%5C2.png" alt="image-20231124175647369"></p>]]></content>
+    <content type="html"><![CDATA[<p><img src="/2023/11/24/%E4%B8%AD%E5%8D%88%E5%A5%BD/1.png"></p><p><img src="/2023/11/24/%E4%B8%AD%E5%8D%88%E5%A5%BD/%E4%B8%AD%E5%8D%88%E5%A5%BD%5C2.png" alt="image-20231124175647369"></p><p><img src="/2023/11/24/%E4%B8%AD%E5%8D%88%E5%A5%BD/2.png"></p>]]></content>
     
     
       
@@ -199,11 +219,11 @@
   </entry>
   
   <entry>
-    <title>Hello World</title>
+    <title>计算最长回文子串长度</title>
     <link href="http://example.com/2023/11/23/hello-world/"/>
     <id>http://example.com/2023/11/23/hello-world/</id>
     <published>2023-11-23T08:33:26.806Z</published>
-    <updated>2023-11-03T00:49:27.152Z</updated>
+    <updated>2024-03-30T15:08:38.549Z</updated>
     
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
     
