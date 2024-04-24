@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-04-23T01:42:32.328Z</updated>
+  <updated>2024-04-24T13:59:28.416Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,53 +17,24 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>测试开发基础整理二</title>
-    <link href="http://example.com/2024/04/23/%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%E5%9F%BA%E7%A1%80%E6%95%B4%E7%90%86%E4%BA%8C/"/>
-    <id>http://example.com/2024/04/23/%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%E5%9F%BA%E7%A1%80%E6%95%B4%E7%90%86%E4%BA%8C/</id>
-    <published>2024-04-23T01:42:09.000Z</published>
-    <updated>2024-04-23T01:42:32.328Z</updated>
+    <title>手写单例设计模式</title>
+    <link href="http://example.com/2024/04/24/%E6%89%8B%E5%86%99%E5%8D%95%E4%BE%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://example.com/2024/04/24/%E6%89%8B%E5%86%99%E5%8D%95%E4%BE%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</id>
+    <published>2024-04-24T13:58:51.000Z</published>
+    <updated>2024-04-24T13:59:28.416Z</updated>
     
-    <content type="html"><![CDATA[<p>123456789</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;123456789&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    
-    <category term="测试开发基础整理" scheme="http://example.com/tags/%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%E5%9F%BA%E7%A1%80%E6%95%B4%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>测试开发基础整理</title>
-    <link href="http://example.com/2024/04/23/%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%E5%9F%BA%E7%A1%80%E6%95%B4%E7%90%86/"/>
-    <id>http://example.com/2024/04/23/%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%E5%9F%BA%E7%A1%80%E6%95%B4%E7%90%86/</id>
-    <published>2024-04-23T01:39:14.000Z</published>
-    <updated>2024-04-23T01:39:46.408Z</updated>
-    
-    <content type="html"><![CDATA[<p>HTTP和HTTPS的区别？</p><p>安全性</p><ol><li>HTTP是明文传输，数据在传输过程中不加密，容易被窃听的篡改。</li><li>HTTPS通过使用SSL&#x2F;TLS协议对数据进行加密，确保传输的安全性和完整性。</li></ol><p>默认端口</p><ol><li>HTTP默认端口是80</li><li>HTTPS默认端口是443</li></ol><p>证书</p><ol><li>HTTP不需要证书</li><li>HTTPS需要服务器证书，用于验证服务器身份</li></ol><p>协议：</p><ol><li>HTTP是超文本传输协议</li><li>HTTPS是HTTP加上SSL&#x2F;TLS协议，即安全的超文本传输协议</li></ol><p>TCP和UDP的区别（连接线、可靠性、数据包、传输效率、使用场景）？</p><p>连接性：</p><ol><li>TCP是面向连接的协议，通信前需要建立连接，然后再进行数据传输，传输完成后再释放连接。</li><li>UDP是无连接的协议，通信双方在发送数据时不需要建立连接，也不需要断开连接，数据包的发送和接收是独立的。</li></ol><p>可靠性:</p><ol><li>TCP提供可靠的数据传输，通过序列号、确认应答、重传等机制确保数据的可靠性</li><li>UDP不提供数据传输的可靠性保证，发送的数据包可能丢失、重复或者无法到达。</li></ol><p>数据包：</p><ol><li>TCP发送的数据包是有序的，每个数据包都有序列号，接收端根据序列号来组装数据。</li><li>UDP发送的数据包是无序的，接收端收到数据包后直接处理，不会对数据包进行排序。</li></ol><p>传输效率：</p><ol><li>TCP传输效率较低，因为需要保证数据的可靠性，会引入较多的控制信息和处理机制，导致传输速度较慢。</li><li>UDP传输效率较高，因为不需要维护连接状态和保证数据可靠性，只负责数据的传输，速度较快。</li></ol><p>适用场景：</p><ol><li>TCP适用于要求数据可靠性较高的场景，如文件传输、网页访问等</li><li>UDP适用于实时性要求较高、可以容忍少量数据丢失的场景，如音视频传输、在线游戏等。</li></ol><p>总的来说，TCP适用于对数据可靠性要求较高的场景，而UDP适用于对实时性要求较高、可以容忍少量数据丢失的场景。</p>]]></content>
+    <content type="html"><![CDATA[<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs html">public class Singleton &#123;<br><br>    // 私有静态变量用于保存唯一实例<br>    private static Singleton instance;<br><br>    // 私有构造函数，防止外部实例化<br>    private Singleton() &#123;<br>    &#125;<br><br>    // 公共静态方法用于获取唯一实例<br>    public static Singleton getInstance() &#123;<br>        // 使用双重检查锁定（double-checked locking）确保线程安全<br>        if (instance == null) &#123;<br>            synchronized (Singleton.class) &#123;<br>                if (instance == null) &#123;<br>                    instance = new Singleton();<br>                &#125;<br>            &#125;<br>        &#125;<br>        return instance;<br>    &#125;<br><br>    // 其他方法（可选）<br>    public void showMessage() &#123;<br>        System.out.println(&quot;Hello, World!&quot;);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure><p>在这个例子中，Singleton类有一个私有静态变量instance用于保存唯一实例。构造函数是私有的，因此不能从外部实例化该类。getInstance方法是公共的静态方法，用于获取唯一实例。在getInstance方法中，使用双重检查锁定（double-checked locking）确保线程安全，即在实例未创建时才进行同步。</p><p>Java的单例设计模式</p><p>1、单例类只能有一个实例。</p><p>2、单例类必须自己创建自己的唯一实例。</p><p>3、单例类必须给所有其他对象提供这一实例。</p><p>单例模式确保某个类只有一个实例，而且自行实例化并向整个系统提供这个实例。在计算机系统中，线程池、缓存、日志对象、对话框、打印机、显卡的驱动程序对象常被设计成单例。这些应用都或多或少具有资源管理器的功能。每台计算机可以有若干个打印机，但只能有一个Printer Spooler，以避免两个打印作业同时输出到打印机中。每台计算机可以有若干通信端口，系统应当集中管理这些通信端口，以避免一个通信端口同时被两个请求同时调用。总之，选择单例模式就是为了避免不一致状态，避免政出多头。</p><p>懒汉式单例：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs html">//懒汉式单例类.在第一次调用的时候实例化自己 <br>public class Singleton &#123;<br>    private Singleton() &#123;&#125;<br>    private static Singleton single=null;<br>    //静态工厂方法 <br>    public static Singleton getInstance() &#123;<br>         if (single == null) &#123;  <br>             single = new Singleton();<br>         &#125;  <br>        return single;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure><p>饿汉式单例：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs html">//饿汉式单例类.在类初始化时，已经自行实例化 <br>public class Singleton1 &#123;<br>    private Singleton1() &#123;&#125;<br>    private static final Singleton1 single = new Singleton1();<br>    //静态工厂方法 <br>    public static Singleton1 getInstance() &#123;<br>        return single;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure><p>Java的序列化：</p><p>Java的序列化是一种将对象转换成字节流的过程，可以将对象持久化到文件中，或者通过网络传输。序列化的主要作用是实现对象的持久化存储和网络传输。</p><p>Java的序列化由java.io.Serializable接口和objectOutputStream、ObjectInputStream类实现。要使一个类可序列化，只需要让该接口实现Serializable类接口即可，该接口没有任何方法，只是一个标识接口，用来表明该类可以被序列化。</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;HTTP和HTTPS的区别？&lt;/p&gt;
-&lt;p&gt;安全性&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;HTTP是明文传输，数据在传输过程中不加密，容易被窃听的篡改。&lt;/li&gt;
-&lt;li&gt;HTTPS通过使用SSL&amp;#x2F;TLS协议对数据进行加密，确保传输的安全性和完整性。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;</summary>
+    <summary type="html">&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=</summary>
       
     
     
     
     
-    <category term="测试开发基础整理" scheme="http://example.com/tags/%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%E5%9F%BA%E7%A1%80%E6%95%B4%E7%90%86/"/>
+    <category term="Java" scheme="http://example.com/tags/Java/"/>
     
   </entry>
   
