@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>MySQL4.23学习</title>
+      <link href="/2024/04/24/MySQL4-23%E5%AD%A6%E4%B9%A0/"/>
+      <url>/2024/04/24/MySQL4-23%E5%AD%A6%E4%B9%A0/</url>
+      
+        <content type="html"><![CDATA[<p>在MySQL中，升序是ASC，降序是DESC</p><p>– 升序排序（从小到大）（一般是默认升序的）</p><p>SELECT * FROM table_name ORDER BY column_name ASC;</p><p>– 降序排序 （从大到小）</p><p>SELECT * FROM table_name ORDER BY column_name DESC;</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs plain">select  tweet_id<br><br>from  Tweets<br><br>where CHAR_LENGTH(content) &gt;=15;<br># CHAR_LENGTH():用于统计字符长度的函数<br>select distinct author_id as id from Views <br>where  author_id = viewer_id order by id ASC;<br></code></pre></td></tr></table></figure><p>左连接(left join)和右连接(right join)：</p><p>左连接和右连接都是SQL用于合并两个表的连接操作，它们的区别在于连接的方式和结果集的处理方式。</p><p>1.左连接（left join）:左连接会返回左表中的所有记录，以及右表中与左表匹配的记录。如果右表中没有匹配的记录，则会返回null值</p><p>SELECT * </p><p>FROM left_table </p><p>LEFT JOIN right_table </p><p>ON left_table.key &#x3D; right_table.key;</p><p>2.右连接(right join):右连接与左连接类似，但它会返回右表中的所有记录，以及左表中与右表匹配的记录。如果左表中没有匹配的记录，则会返回NULL值。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs plain">SELECT * <br>FROM left_table <br>RIGHT JOIN right_table <br>ON left_table.key = right_table.key;<br></code></pre></td></tr></table></figure><p>3.内连接(INNER JOIN):是SQL中连接操作的一种，它会返回两个表中满足连接条件的行。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs plain">SELECT * <br>FROM table1 <br>INNER JOIN table2 <br>ON table1.column_name = table2.column_name;<br></code></pre></td></tr></table></figure><p>如何判断使用左连接还是右连接还是内连接？</p><p>1.内连接（INNER JOIN）：当你只想获取两个表中有匹配关系的行时，应该使用内连接。这种情况下，结果集将只包含两个表中满足连接条件的行。</p><p>2.左连接（LEFT JOIN）：当你想要获取左表中的所有行，以及右表中与左表匹配的行时，应该使用左连接。左连接可以保证左表中的所有行都会出现在结果集中，即使右表中没有匹配的行也会返回左表中的数据，并且用 NULL 值填充右表中的列。</p><p>3.右连接（RIGHT JOIN）：当你想要获取右表中的所有行，以及左表中与右表匹配的行时，应该使用右连接。右连接类似于左连接，但是会保证右表中的所有行都会出现在结果集中，即使左表中没有匹配的行也会返回右表中的数据，并且用 NULL 值填充左表中的列。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> MySQL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>手写单例设计模式</title>
       <link href="/2024/04/24/%E6%89%8B%E5%86%99%E5%8D%95%E4%BE%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
       <url>/2024/04/24/%E6%89%8B%E5%86%99%E5%8D%95%E4%BE%8B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</url>
