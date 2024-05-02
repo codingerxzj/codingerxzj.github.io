@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-04-24T14:03:25.866Z</updated>
+  <updated>2024-05-02T02:04:59.001Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python集合-列表-字典-元组的区别</title>
+    <link href="http://example.com/2024/05/02/Python%E9%9B%86%E5%90%88-%E5%88%97%E8%A1%A8-%E5%AD%97%E5%85%B8-%E5%85%83%E7%BB%84%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+    <id>http://example.com/2024/05/02/Python%E9%9B%86%E5%90%88-%E5%88%97%E8%A1%A8-%E5%AD%97%E5%85%B8-%E5%85%83%E7%BB%84%E7%9A%84%E5%8C%BA%E5%88%AB/</id>
+    <published>2024-05-02T02:04:35.000Z</published>
+    <updated>2024-05-02T02:04:59.001Z</updated>
+    
+    <content type="html"><![CDATA[<p>1、可变性（Mutability）：</p><ul><li>列表（List）： 可变的（Mutable），可以通过索引修改、添加或删除元素。</li><li>元组（Tuple）： 不可变的（Immutable），一旦创建后就不能修改。</li><li>集合（Set）： 可变的（Mutable），但集合内部的元素必须是不可变的，即集合本身可以添加或删除元素，但集合内部的元素不能是集合或字典。</li><li>字典（Dictionary）： 可变的（Mutable），可以通过键来修改、添加或删除键值对。</li></ul><p>2、有序性（Ordering）：</p><ul><li>列表（List）： 有序的，即元素按照插入的顺序排列。</li><li>元组（Tuple）： 有序的，即元素按照插入的顺序排列。</li><li>集合（Set）： 无序的，集合中的元素没有明确的顺序。</li><li>字典（Dictionary）： 无序的，字典中的键值对没有明确的顺序。</li></ul><p>3、重复性（Duplicate）：</p><ul><li>列表（List）： 允许重复的元素。</li><li>元组（Tuple）： 允许重复的元素。</li><li>集合（Set）： 不允许重复的元素，集合会自动去重。</li><li>字典（Dictionary）： 键不能重复，但值可以重复。</li></ul><p>4、表示符号：</p><ul><li>列表（List）： 使用方括号[]表示，例如[1, 2, 3]。</li><li>元组（Tuple）： 使用圆括号()表示，例如(1, 2, 3)。</li><li>集合（Set）： 使用花括号{}表示，例如{1, 2, 3}。</li><li>字典（Dictionary）： 使用花括号{}表示，键值对之间用冒号:分隔，例如{‘name’: ‘John’, ‘age’: 30}。</li></ul><p>5、适用场景：</p><ul><li>列表（List）： 适用于需要保持元素顺序和允许重复元素的情况。</li><li>元组（Tuple）： 适用于希望数据不可变的情况，如用作字典的键或保护数据不被修改。</li><li>集合（Set）： 适用于需要去重或判断元素是否存在的情况。</li><li>字典（Dictionary）： 适用于需要通过键来快速查找、修改或删除值的情况。</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;1、可变性（Mutability）：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;列表（List）： 可变的（Mutable），可以通过索引修改、添加或删除元素。&lt;/li&gt;
+&lt;li&gt;元组（Tuple）： 不可变的（Immutable），一旦创建后就不能修改。&lt;/li&gt;
+&lt;li&gt;集合（Set）</summary>
+      
+    
+    
+    
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>个人博客的使用及介绍</title>
+    <link href="http://example.com/2024/05/02/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E4%BD%BF%E7%94%A8%E5%8F%8A%E4%BB%8B%E7%BB%8D/"/>
+    <id>http://example.com/2024/05/02/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E4%BD%BF%E7%94%A8%E5%8F%8A%E4%BB%8B%E7%BB%8D/</id>
+    <published>2024-05-02T02:01:27.000Z</published>
+    <updated>2024-05-02T02:01:55.065Z</updated>
+    
+    <content type="html"><![CDATA[<p>1、比如我写好了一篇叫“测试开发基础学习的文章”</p><p>我该怎么上传到博客中？</p><p>在D盘下myblog&#x2F;blog文件夹下，右键用bit bash打开，使用hexo new “文件名称”命令就会在这个文件夹下面新建一个以“文件名称为名的文件夹”，同时出现一个以文件名称为名的md文件,我可以把自己做的md文件复制到这个上面再进行上传。</p><p>然后再使用 hexo g 命令，因为新建文章之后需要生成一遍文件</p><p>新建文章后，可以在本地先预览一遍：输入命令hexo s浏览器输入(localhost:4000)(ctrl+c关闭)</p><p>最后直接部署到Github上就可以了，也就是用hexo d</p><p>在用<a href="https://codingerxzj.github.io/%E8%BF%9B%E8%A1%8C%E8%AE%BF%E9%97%AE">https://codingerxzj.github.io/进行访问</a></p><p>先hexo new “文章名称”，复制粘贴本地文章</p><p>再hexo g 生成一遍文件</p><p>再hexo s 预览一下</p><p>最后进行hexo d部署</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;1、比如我写好了一篇叫“测试开发基础学习的文章”&lt;/p&gt;
+&lt;p&gt;我该怎么上传到博客中？&lt;/p&gt;
+&lt;p&gt;在D盘下myblog&amp;#x2F;blog文件夹下，右键用bit bash打开，使用hexo new “文件名称”命令就会在这个文件夹下面新建一个以“文件名称为名的文件夹”，</summary>
+      
+    
+    
+    
+    
+    <category term="blog_use" scheme="http://example.com/tags/blog-use/"/>
+    
+  </entry>
   
   <entry>
     <title>MySQL4.23学习</title>
