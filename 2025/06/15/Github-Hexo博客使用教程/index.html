@@ -1,0 +1,681 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="codingerxzj">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Hexo+Github博客使用教程首先，进入到以下路径： 1D:\Blog   然后右键点击 Open Git Bash here  进入到GUI窗口  使用的流程： 1.新建一篇文章123456hexo new &quot;文章名字&quot; #简写 hexo n &quot;文章名字&quot;例如：hexo new post &quot;Hello World&quot;  #新建一篇名叫">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Github+Hexo博客使用教程">
+<meta property="og:url" content="https://codingerxzj.github.io/2025/06/15/Github-Hexo%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/index.html">
+<meta property="og:site_name" content="xzj-blog">
+<meta property="og:description" content="Hexo+Github博客使用教程首先，进入到以下路径： 1D:\Blog   然后右键点击 Open Git Bash here  进入到GUI窗口  使用的流程： 1.新建一篇文章123456hexo new &quot;文章名字&quot; #简写 hexo n &quot;文章名字&quot;例如：hexo new post &quot;Hello World&quot;  #新建一篇名叫">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="d:\Blog\source_posts\Github-Hexo%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B\image-20250615120955387.png">
+<meta property="og:image" content="d:\Blog\source_posts\Github-Hexo%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B\image-20250615121118290.png">
+<meta property="og:image" content="d:\Blog\source_posts\Github-Hexo%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B\image-20250615121540654.png">
+<meta property="article:published_time" content="2025-06-15T03:50:28.000Z">
+<meta property="article:modified_time" content="2025-06-15T04:16:53.084Z">
+<meta property="article:author" content="codingerxzj">
+<meta property="article:tag" content="测试开发学习">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="d:\Blog\source_posts\Github-Hexo%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B\image-20250615120955387.png">
+  
+  
+  
+  <title>Github+Hexo博客使用教程 - xzj-blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"codingerxzj.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>Home</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>Archives</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>Categories</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>Tags</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>About</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Github+Hexo博客使用教程"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-06-15 11:50" pubdate>
+          June 15, 2025 am
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.1k words
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          9 mins
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">Github+Hexo博客使用教程</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="Hexo-Github博客使用教程"><a href="#Hexo-Github博客使用教程" class="headerlink" title="Hexo+Github博客使用教程"></a>Hexo+Github博客使用教程</h1><p>首先，进入到以下路径：</p>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs avrasm"><span class="hljs-symbol">D:</span>\Blog<br></code></pre></td></tr></table></figure>
+
+<p><img src="D:\Blog\source_posts\Github-Hexo博客使用教程\image-20250615120955387.png" srcset="/img/loading.gif" lazyload alt="image-20250615120955387"></p>
+<p>然后右键点击 Open Git Bash here</p>
+<p><img src="D:\Blog\source_posts\Github-Hexo博客使用教程\image-20250615121118290.png" srcset="/img/loading.gif" lazyload alt="image-20250615121118290"></p>
+<p>进入到GUI窗口</p>
+<p><img src="D:\Blog\source_posts\Github-Hexo博客使用教程\image-20250615121540654.png" srcset="/img/loading.gif" lazyload alt="image-20250615121540654"></p>
+<p>使用的流程：</p>
+<h4 id="1-新建一篇文章"><a href="#1-新建一篇文章" class="headerlink" title="1.新建一篇文章"></a>1.新建一篇文章</h4><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs livecodeserver">hexo <span class="hljs-built_in">new</span> <span class="hljs-string">&quot;文章名字&quot;</span> <span class="hljs-comment">#简写 hexo n &quot;文章名字&quot;</span><br>例如：hexo <span class="hljs-built_in">new</span> <span class="hljs-built_in">post</span> <span class="hljs-string">&quot;Hello World&quot;</span>  <span class="hljs-comment">#新建一篇名叫Hello World的文章</span><br><br>hexo <span class="hljs-built_in">new</span> <span class="hljs-built_in">post</span> <span class="hljs-string">&quot;Hello World&quot;</span>  <span class="hljs-comment"># 创建文章</span><br>hexo <span class="hljs-built_in">new</span> page <span class="hljs-string">&quot;about&quot;</span>        <span class="hljs-comment"># 创建独立页面</span><br>hexo <span class="hljs-built_in">new</span> draft <span class="hljs-string">&quot;new-feature&quot;</span> <span class="hljs-comment"># 创建草稿（暂不发布）</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="2-要是你想给文章添加分类和标签，可以在生成的-Markdown-文件开头的元数据部分进行设置："><a href="#2-要是你想给文章添加分类和标签，可以在生成的-Markdown-文件开头的元数据部分进行设置：" class="headerlink" title="2.要是你想给文章添加分类和标签，可以在生成的 Markdown 文件开头的元数据部分进行设置："></a>2.要是你想给文章添加分类和标签，可以在生成的 Markdown 文件开头的元数据部分进行设置：</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">文章标题</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2025-06-15 12:00:00</span><br><span class="hljs-attr">categories:</span> <span class="hljs-string">分类名称</span><br><span class="hljs-attr">tags:</span> [<span class="hljs-string">标签1</span>, <span class="hljs-string">标签2</span>]<br><span class="hljs-meta">---</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="3-编辑文章内容"><a href="#3-编辑文章内容" class="headerlink" title="3.编辑文章内容"></a>3.编辑文章内容</h4><p>你可以使用任意文本编辑器来编辑刚才生成的 Markdown 文件。Hexo 支持标准的 Markdown 语法，同时还能<strong>使用 Hexo 特有的标签插件</strong>，比如插入图片、视频等。</p>
+<p>可以查看<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">文档 | Hexo</a> hexo的官网地址。</p>
+<h3 id="二、本地预览文章效果"><a href="#二、本地预览文章效果" class="headerlink" title="二、本地预览文章效果"></a>二、本地预览文章效果</h3><h4 id="1-生成静态文件"><a href="#1-生成静态文件" class="headerlink" title="1. 生成静态文件"></a>1. 生成静态文件</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo generate  <span class="hljs-comment"># 也可以简写为hexo g，执行后会在public目录生成静态网页文件</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="2-启动本地服务器"><a href="#2-启动本地服务器" class="headerlink" title="2. 启动本地服务器"></a>2. 启动本地服务器</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo server  <span class="hljs-comment"># 也可简写为hexo s，启动后访问http://localhost:4000就能预览博客</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="三、将文章部署到-GitHub-Pages"><a href="#三、将文章部署到-GitHub-Pages" class="headerlink" title="三、将文章部署到 GitHub Pages"></a>三、将文章部署到 GitHub Pages</h3><h4 id="1-清除缓存（可选操作）"><a href="#1-清除缓存（可选操作）" class="headerlink" title="1. 清除缓存（可选操作）"></a>1. 清除缓存（可选操作）</h4><p>在部署之前，建议先清除缓存文件，防止旧文件对部署产生影响：</p>
+<p>bash</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean  <span class="hljs-comment"># 此命令会清除public目录和缓存文件</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="2-生成并部署文章"><a href="#2-生成并部署文章" class="headerlink" title="2. 生成并部署文章"></a>2. 生成并部署文章</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo deploy  <span class="hljs-comment"># 也能简写为hexo d，该命令会把public目录下的文件推送到GitHub</span><br></code></pre></td></tr></table></figure>
+
+<p>如果你希望一步完成生成和部署操作，可使用组合命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo g -d  <span class="hljs-comment"># 等同于依次执行hexo generate和hexo deploy</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="2-处理图片和资源"><a href="#2-处理图片和资源" class="headerlink" title="2. 处理图片和资源"></a>2. 处理图片和资源</h4><p>如果你在文章里需要插入图片，可以把图片文件存放在<code>source/images</code>目录下，然后在 Markdown 中使用相对路径进行引用：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs markdown">![<span class="hljs-string">图片描述</span>](<span class="hljs-link">/images/filename.jpg</span>)<br></code></pre></td></tr></table></figure>
+
+<h1 id="修改文章名字"><a href="#修改文章名字" class="headerlink" title="修改文章名字"></a>修改文章名字</h1><p>在 Hexo 中修改博客文章名称需要同时更新文件名称和元数据，确保链接和引用的一致性。以下是详细步骤：</p>
+<h3 id="第一步：修改本地文件名称"><a href="#第一步：修改本地文件名称" class="headerlink" title="第一步：修改本地文件名称"></a>第一步：修改本地文件名称</h3><p>找到<code>source/_posts</code>目录下对应的 Markdown 文件，重命名它。例如将<code>old-title.md</code>改为<code>new-title.md</code>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> your-blog/source/_posts<br><span class="hljs-built_in">mv</span> old-title.md new-title.md  <span class="hljs-comment"># 重命名文件</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="第二步：更新文章内部元数据"><a href="#第二步：更新文章内部元数据" class="headerlink" title="第二步：更新文章内部元数据"></a>第二步：更新文章内部元数据</h3><p>打开修改后的文件，更新<code>title</code>字段以匹配新标题：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs markdown">---<br>title: 新的文章标题  # 修改这里<br>date: 2023-01-01<br><span class="hljs-section">tags: [标签1, 标签2]</span><br><span class="hljs-section">---</span><br><br>正文内容...<br></code></pre></td></tr></table></figure>
+
+<h3 id="第三步：处理永久链接（可选）"><a href="#第三步：处理永久链接（可选）" class="headerlink" title="第三步：处理永久链接（可选）"></a>第三步：处理永久链接（可选）</h3><p>如果希望 URL 保持不变，可以通过<code>permalink</code>字段固定链接：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs markdown">---<br>title: 新的文章标题<br>date: 2023-01-01<br><span class="hljs-section">permalink: old-title  # 保持旧URL</span><br><span class="hljs-section">---</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="第四步：更新引用和链接"><a href="#第四步：更新引用和链接" class="headerlink" title="第四步：更新引用和链接"></a>第四步：更新引用和链接</h3><p>检查其他文章或页面中是否存在对旧标题的直接链接，如有需要手动更新这些引用。</p>
+<h3 id="第五步：重新生成并部署"><a href="#第五步：重新生成并部署" class="headerlink" title="第五步：重新生成并部署"></a>第五步：重新生成并部署</h3><p>执行以下命令重新生成静态文件并推送到 GitHub：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean  <span class="hljs-comment"># 清除缓存</span><br>hexo generate  <span class="hljs-comment"># 重新生成</span><br>hexo deploy  <span class="hljs-comment"># 部署到GitHub</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h1 id="删除文章"><a href="#删除文章" class="headerlink" title="删除文章"></a>删除文章</h1><h3 id="第一步：删除本地博客文件"><a href="#第一步：删除本地博客文件" class="headerlink" title="第一步：删除本地博客文件"></a>第一步：删除本地博客文件</h3><p>你可以在博客项目的<code>source/_posts</code>目录中，找到hexo想要删除的那篇博客对应的 Markdown 文件，然后将其删除。比如，若要删除名为<code>hello-world.md</code>的博客，可使用如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> your-blog-name/source/_posts  <span class="hljs-comment"># 进入存放博客文章的目录</span><br><span class="hljs-built_in">rm</span> hello-world.md  <span class="hljs-comment"># 删除对应的博客文件</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="第二步：更新本地的标签和分类"><a href="#第二步：更新本地的标签和分类" class="headerlink" title="第二步：更新本地的标签和分类"></a>第二步：更新本地的标签和分类</h3><p>删除博客之后，你要更新本地的标签和分类信息。执行以下命令来重新生成静态文件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean  <span class="hljs-comment"># 清除缓存文件和已生成的静态文件</span><br>hexo generate  <span class="hljs-comment"># 重新生成静态文件</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="第三步：将更改推送到-GitHub"><a href="#第三步：将更改推送到-GitHub" class="headerlink" title="第三步：将更改推送到 GitHub"></a>第三步：将更改推送到 GitHub</h3><p>最后，你需要把本地的更改推送到 GitHub 上，让线上博客也更新。执行下面的命令来部署：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo deploy  <span class="hljs-comment"># 将更改部署到GitHub Pages</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="第四步：验证博客是否已删除"><a href="#第四步：验证博客是否已删除" class="headerlink" title="第四步：验证博客是否已删除"></a>第四步：验证博客是否已删除</h3><p>完成上述操作后，你可以访问自己的博客网址，确认那篇博客是否已经被成功删除。要是你使用了缓存插件，可能需要清除浏览器缓存才能看到最新的效果。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/" class="print-no-link">#测试开发学习</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Github+Hexo博客使用教程</div>
+      <div>https://codingerxzj.github.io/2025/06/15/Github-Hexo博客使用教程/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>Author</div>
+          <div>codingerxzj</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>Posted on</div>
+          <div>June 15, 2025</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>Licensed under</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - Attribution">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/06/12/UI%E8%87%AA%E5%8A%A8%E5%8C%96%E6%80%BB%E7%BB%93/" title="UI自动化总结">
+                        <span class="hidden-mobile">UI自动化总结</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>Table of Contents</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">Keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">Blog works best with JavaScript enabled</div>
+  </noscript>
+</body>
+</html>
