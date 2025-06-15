@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>如何更好的发现bug</title>
+    <link href="/2025/06/15/%E5%A6%82%E4%BD%95%E6%9B%B4%E5%A5%BD%E7%9A%84%E5%8F%91%E7%8E%B0bug/"/>
+    <url>/2025/06/15/%E5%A6%82%E4%BD%95%E6%9B%B4%E5%A5%BD%E7%9A%84%E5%8F%91%E7%8E%B0bug/</url>
+    
+    <content type="html"><![CDATA[<h2 id="如何更好的发现Bug？"><a href="#如何更好的发现Bug？" class="headerlink" title="如何更好的发现Bug？"></a>如何更好的发现Bug？</h2><p>1、按照测试用例执行，只有能正常执行就行(最直接的)</p><p>2、模拟用户使用一下你测试的模块；</p><p>3、评审通过的测试用例；</p><p>4、作为一名最终的用户你会怎么用；</p><p>5、发散性使用，不考虑逻辑随便用用；</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>工作tips</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Github+Hexo博客使用教程</title>
     <link href="/2025/06/15/Github-Hexo%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"/>
     <url>/2025/06/15/Github-Hexo%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</url>
