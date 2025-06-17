@@ -1,0 +1,2118 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="../../../../img/fluid.png">
+  <link rel="icon" href="../../../../img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="codingerxzj">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="1. Linux系统概述  Linux是一种开源操作系统，与Windows或macOS等操作系统不同，Linux允许用户自由地查看、修改和分发其源代码。以下是Linux系统的一些显著的优势。  稳定性和可靠性： Linux内核以其稳定性而闻名，能够持续运行数月甚至数年而不需要重新启动。这对于服务器来说至关重要，因为它们需要保持长时间的稳定运行，以提供持续的服务。  安全性： Linux系统的安全性">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux基础">
+<meta property="og:url" content="https://codingerxzj.github.io/2025/06/17/Linux%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:site_name" content="xzj-blog">
+<meta property="og:description" content="1. Linux系统概述  Linux是一种开源操作系统，与Windows或macOS等操作系统不同，Linux允许用户自由地查看、修改和分发其源代码。以下是Linux系统的一些显著的优势。  稳定性和可靠性： Linux内核以其稳定性而闻名，能够持续运行数月甚至数年而不需要重新启动。这对于服务器来说至关重要，因为它们需要保持长时间的稳定运行，以提供持续的服务。  安全性： Linux系统的安全性">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/Linux.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/VMware%E5%AE%89%E8%A3%85%E5%90%91%E5%AF%BC.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/VMware%E7%94%A8%E6%88%B7%E5%8D%8F%E8%AE%AE.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/VMware%E9%80%89%E6%8B%A9%E5%AE%89%E8%A3%85%E4%BD%8D%E7%BD%AE.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/VMware%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C%E8%AE%BE%E7%BD%AE.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/VMware%E5%AE%8C%E6%88%90%E5%AE%89%E8%A3%85.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/VMware%E7%AD%89%E5%BE%85%E5%AE%89%E8%A3%85.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/VMWare%E5%AE%8C%E6%95%B4%E5%AE%89%E8%A3%85.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/VMware%E8%AF%95%E7%94%A8%E5%92%8C%E6%BF%80%E6%B4%BB.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E6%9C%BA.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E9%80%89%E6%8B%A9%E5%85%B8%E5%9E%8B%E5%90%91%E5%AF%BC.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E9%80%89%E6%8B%A9%E7%A8%8D%E5%90%8E%E5%AE%89%E8%A3%85%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E9%80%89%E6%8B%A9%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%B1%BB%E5%9E%8B.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E9%80%89%E6%8B%A9%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85%E7%9B%AE%E5%BD%95.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E8%AE%BE%E7%BD%AE%E7%A3%81%E7%9B%98%E5%A4%A7%E5%B0%8F.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%A1%AC%E4%BB%B6.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%86%85%E5%AD%98.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%A4%84%E7%90%86%E5%99%A8.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%BC%8F.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F%E9%95%9C%E5%83%8F.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E9%80%89%E6%8B%A9IOS%E9%95%9C%E5%83%8F%E8%B7%AF%E5%BE%84.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E5%BC%80%E5%90%AF%E8%99%9A%E6%8B%9F%E6%9C%BA.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E5%BC%80%E5%A7%8B%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E7%AD%89%E5%BE%85%E5%90%AF%E5%8A%A8%E5%90%91%E5%AF%BC.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E5%AE%89%E8%A3%85%E5%90%91%E5%AF%BC%E5%B7%B2%E5%90%AF%E5%8A%A8.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E9%80%89%E6%8B%A9%E7%B3%BB%E7%BB%9F%E8%AF%AD%E8%A8%80.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E9%80%89%E6%8B%A9%E6%97%B6%E5%8C%BA.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E8%BD%AF%E4%BB%B6%E9%80%89%E6%8B%A9.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E5%AE%89%E8%A3%85%E4%BD%8D%E7%BD%AE.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E5%85%B3%E9%97%ADKDUMP.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E5%BC%80%E5%A7%8B%E5%AE%89%E8%A3%85.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E8%AE%BE%E7%BD%AEroot%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E5%88%9B%E5%BB%BA%E6%99%AE%E9%80%9A%E7%94%A8%E6%88%B7.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E7%AD%89%E5%BE%85%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E9%87%8D%E5%90%AF%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E6%88%91%E5%90%8C%E6%84%8F%E5%8D%8F%E8%AE%AE.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E8%BF%9E%E6%8E%A5%E7%BD%91%E7%BB%9C.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E8%99%9A%E6%8B%9F%E7%BD%91%E7%BB%9C%E7%BC%96%E8%BE%91%E5%99%A8.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E6%9B%B4%E6%94%B9%E8%AE%BE%E7%BD%AE.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E9%80%89%E6%8B%A9%E7%9B%AE%E5%89%8D%E4%B8%BB%E6%9C%BA%E8%81%94%E7%BD%91%E6%89%80%E4%BD%BF%E7%94%A8%E7%9A%84%E7%BD%91%E5%8D%A1.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E5%AE%8C%E6%88%90%E9%85%8D%E7%BD%AE.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E6%8B%8D%E6%91%84%E5%BF%AB%E7%85%A7.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E5%BF%AB%E7%85%A7%E5%90%8D%E7%A7%B0%E5%92%8C%E6%8F%8F%E8%BF%B0.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E8%AF%AF%E6%93%8D%E4%BD%9C.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E5%BF%AB%E7%85%A7%E7%AE%A1%E7%90%86%E5%99%A8.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E6%81%A2%E5%A4%8D%E5%BF%AB%E7%85%A7.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E5%88%A0%E9%99%A4%E5%BF%AB%E7%85%A7.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E6%89%93%E5%BC%80%E5%85%8B%E9%9A%86%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%90%91%E5%AF%BC.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E9%80%89%E6%8B%A9%E5%85%8B%E9%9A%86%E7%8A%B6%E6%80%81.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E9%80%89%E6%8B%A9%E5%85%8B%E9%9A%86%E6%96%B9%E5%BC%8F.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E9%80%89%E6%8B%A9%E5%85%8B%E9%9A%86%E4%BD%8D%E7%BD%AE.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E5%88%A0%E9%99%A4%E8%99%9A%E6%8B%9F%E6%9C%BA.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/Linux%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F.drawio.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%95%8C%E9%9D%A2.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/Shell%E7%A4%BA%E6%84%8F%E5%9B%BE.drawio.svg">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/vim.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/Vim%E6%A8%A1%E5%BC%8F%E4%BB%8B%E7%BB%8D.drawio.svg">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/SSH.drawio.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E7%82%B9%E5%87%BBSession.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E5%A1%AB%E5%85%A5%E8%BF%9E%E6%8E%A5%E4%BF%A1%E6%81%AF.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E8%BE%93%E5%85%A5root%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E7%99%BB%E5%BD%95%E6%88%90%E5%8A%9F.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/VMware%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE-%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F%E6%95%88%E6%9E%9C%E5%9B%BE.drawio.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/VMware%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE-%E7%89%A9%E7%90%86%E7%BD%91%E7%BB%9C%E6%8B%93%E6%89%91.drawio.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/NAT%E8%AE%BE%E5%A4%87%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86.drawio.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/VMware%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE-%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F.drawio.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/VMware%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE-NAT%E6%A8%A1%E5%BC%8F.drawio.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/VMware%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE-%E4%BB%85%E4%B8%BB%E6%9C%BA%E6%A8%A1%E5%BC%8F.drawio.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/VMware%E8%99%9A%E6%8B%9F%E7%BD%91%E7%BB%9C%E7%BC%96%E8%BE%91.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/VMware%E8%99%9A%E6%8B%9F%E7%BD%91%E7%BB%9C%E7%BC%96%E8%BE%91-%E7%AE%A1%E7%90%86%E5%91%98%E6%9D%83%E9%99%90.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/VMware%E8%99%9A%E6%8B%9F%E7%BD%91%E7%BB%9C%E7%BC%96%E8%BE%91-%E5%AD%90%E7%BD%91%E9%85%8D%E7%BD%AE.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/VMware%E8%99%9A%E6%8B%9F%E7%BD%91%E7%BB%9C%E7%BC%96%E8%BE%91-NAT.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/VMware%E8%99%9A%E6%8B%9F%E7%BD%91%E7%BB%9C%E7%BC%96%E8%BE%91-NAT%E7%BD%91%E5%85%B3%E9%85%8D%E7%BD%AE.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%80%89%E6%8B%A9%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%BC%8F.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%80%89%E6%8B%A9%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%BC%8F-NAT.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/Windows%E4%B8%BB%E6%9C%BA%E7%BD%91%E7%BB%9C%E9%80%82%E9%85%8D%E5%99%A8.png">
+<meta property="og:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/Windows%E4%B8%BB%E6%9C%BA%E7%BD%91%E7%BB%9C%E9%80%82%E9%85%8D%E5%99%A8-IP%E9%85%8D%E7%BD%AE.png">
+<meta property="article:published_time" content="2025-06-17T08:47:21.000Z">
+<meta property="article:modified_time" content="2025-06-17T08:48:47.815Z">
+<meta property="article:author" content="codingerxzj">
+<meta property="article:tag" content="测试开发学习">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://codingerxzj.github.io/.io//BaiduNetdiskDownload/1.%E7%AC%94%E8%AE%B0/images/Linux.png">
+  
+  
+  
+  <title>Linux基础 - xzj-blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="../../../../css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="../../../../css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="../../../../css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"codingerxzj.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="../../../../js/utils.js" ></script>
+  <script  src="../../../../js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="../../../../index.html">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="../../../../index.html" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>Home</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="../../../../archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>Archives</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="../../../../categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>Categories</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="../../../../tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>Tags</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="../../../../about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>About</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('../../../../img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Linux基础"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-06-17 16:47" pubdate>
+          June 17, 2025 pm
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          8k words
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          67 mins
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">Linux基础</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="1-Linux系统概述"><a href="#1-Linux系统概述" class="headerlink" title="1. Linux系统概述"></a>1. Linux系统概述</h1><img src="/.io//BaiduNetdiskDownload\1.笔记\images\Linux.png" srcset="/img/loading.gif" lazyload style="zoom: 10%;">
+
+<p>Linux是一种开源操作系统，与Windows或macOS等操作系统不同，Linux允许用户自由地查看、修改和分发其源代码。以下是Linux系统的一些显著的优势。</p>
+<ul>
+<li><p><strong>稳定性和可靠性</strong>：</p>
+<p>Linux内核以其稳定性而闻名，能够持续运行数月甚至数年而不需要重新启动。这对于服务器来说至关重要，因为它们需要保持长时间的稳定运行，以提供持续的服务。</p>
+</li>
+<li><p><strong>安全性</strong>：</p>
+<p>Linux系统的安全性得到了广泛认可。开源的自然属性使得漏洞可以很快被发现和修复，从而降低了受到安全威胁的风险。</p>
+</li>
+<li><p><strong>资源利用效率</strong>：</p>
+<p>Linux在资源管理方面表现出色，可以高效地利用服务器硬件资源，使得服务器能够同时处理大量的请求。</p>
+</li>
+<li><p><strong>开源和免费</strong>.</p>
+<p>Linux是开源的，因此不需要为操作系统本身付费。这使得它在经济上具有明显的优势，特别是对于企业或组织需要部署大量服务器的情况。</p>
+</li>
+</ul>
+<p>由于上述的这些优势，Linux系统成为了许多企业和组织首选的服务器操作系统。</p>
+<h1 id="2-安装Linux虚拟机"><a href="#2-安装Linux虚拟机" class="headerlink" title="2. 安装Linux虚拟机"></a>2. 安装Linux虚拟机</h1><h2 id="2-1-安装VMware"><a href="#2-1-安装VMware" class="headerlink" title="2.1 安装VMware"></a>2.1 安装VMware</h2><p>常见的虚拟机软件有VMware、Virtual Box等，本课程使用VMware。</p>
+<ol>
+<li><p>双击<code>VMware-workstation-full-17.0.0-20800274.exe</code>安装包，启动安装向导，并点击<code>下一步</code>。</p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\VMware安装向导.png" srcset="/img/loading.gif" lazyload style="zoom:80%;">
+</li>
+<li><p>查看用户许可协议，勾选接收并点击<code>下一步</code>。</p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\VMware用户协议.png" srcset="/img/loading.gif" lazyload style="zoom:80%;">
+</li>
+<li><p>选择安装路径，并点击<code>下一步</code></p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\VMware选择安装位置.png" srcset="/img/loading.gif" lazyload style="zoom:80%;">
+</li>
+<li><p>用户体验设置，建议取消勾选，并点击<code>下一步</code></p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\VMware用户体验设置.png" srcset="/img/loading.gif" lazyload style="zoom:80%;">
+</li>
+<li><p>创建快捷方式，建议勾选，并点击<code>下一步</code></p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\快捷方式.png" srcset="/img/loading.gif" lazyload style="zoom:80%;">
+</li>
+<li><p>点击<code>安装</code>，开始进行安装。</p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\VMware完成安装.png" srcset="/img/loading.gif" lazyload style="zoom:80%;">
+</li>
+<li><p>等待完成安装</p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\VMware等待安装.png" srcset="/img/loading.gif" lazyload style="zoom:80%;">
+</li>
+<li><p>点击<code>完成</code>，结束向导</p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\VMWare完整安装.png" srcset="/img/loading.gif" lazyload style="zoom:80%;">
+</li>
+<li><p>启动VMware，可填入许可秘钥进行激活，或者选择30天试用。</p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\VMware试用和激活.png" srcset="/img/loading.gif" lazyload style="zoom:80%;"></li>
+</ol>
+<h2 id="2-2-安装虚拟机"><a href="#2-2-安装虚拟机" class="headerlink" title="2.2 安装虚拟机"></a>2.2 安装虚拟机</h2><ol>
+<li><p>点击<code>创建新的虚拟机</code>， 启动向导</p>
+<p><img src="/.io//BaiduNetdiskDownload\1.笔记\images\创建虚拟机.png" srcset="/img/loading.gif" lazyload></p>
+</li>
+<li><p>选择典型向导，并点击<code>下一步</code></p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\选择典型向导.png" srcset="/img/loading.gif" lazyload style="zoom:80%;">
+</li>
+<li><p>选择稍后安装操作系统，并点击<code>下一步</code></p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\选择稍后安装操作系统.png" srcset="/img/loading.gif" lazyload style="zoom:80%;">
+</li>
+<li><p>选择操作系统类型，分别选择<code>Linux</code>和<code>Centos 7 64 位</code>，并点击<code>下一步</code></p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\选择操作系统类型.png" srcset="/img/loading.gif" lazyload style="zoom:80%;">
+</li>
+<li><p>为虚拟机命令并选择安装目录，完成后点击<code>下一步</code></p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\选择虚拟机安装目录.png" srcset="/img/loading.gif" lazyload style="zoom:80%;">
+</li>
+<li><p>设置磁盘大小，建议<code>40G</code>，完成后点击<code>下一步</code></p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\设置磁盘大小.png" srcset="/img/loading.gif" lazyload style="zoom:80%;">
+</li>
+<li><p>点击<code>自定义硬件</code></p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\自定义硬件.png" srcset="/img/loading.gif" lazyload style="zoom:80%;">
+</li>
+<li><p>自定义虚拟机内存大小，推荐<code>4G</code></p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\自定义内存.png" srcset="/img/loading.gif" lazyload style="zoom:80%;">
+</li>
+<li><p>自定义虚拟机处理器，推荐1个处理器2个核心</p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\自定义处理器.png" srcset="/img/loading.gif" lazyload style="zoom:80%;">
+</li>
+<li><p>自定义网络模式，暂时选择<code>桥接模式</code></p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\自定义网络模式.png" srcset="/img/loading.gif" lazyload style="zoom:80%;"></li>
+</ol>
+<h2 id="2-3-安装Centos7系统"><a href="#2-3-安装Centos7系统" class="headerlink" title="2.3 安装Centos7系统"></a>2.3 安装Centos7系统</h2><p>Linux系统拥有众多的发行版，其中Centos是最常用于服务器的发行版之一，除此之外，还有Ubuntu、Debian等等。</p>
+<blockquote>
+<p>Linux发行版是指在相同的Linux内核的基础上，增加不同的系统工具和应用程序等，从而构成的一个完整的操作系统。</p>
+</blockquote>
+<ol>
+<li><p>下载Centos系统镜像</p>
+<p>IOS镜像的下载地址为：</p>
+<ul>
+<li><p>官网：<a target="_blank" rel="noopener" href="https://www.centos.org/download/">https://www.centos.org/download/</a></p>
+</li>
+<li><p>国内镜像：<a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/centos/7/isos/x86_64/">http://mirrors.aliyun.com/centos/7/isos/x86_64/</a></p>
+</li>
+</ul>
+</li>
+<li><p>安装系统镜像，选择<code>CD/DVD</code>模式</p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\安装系统镜像.png" srcset="/img/loading.gif" lazyload style="zoom:80%;">
+</li>
+<li><p>选择ISO镜像，并指定<code>CentOS-7-x86_64-DVD-2009.iso</code>镜像所在路径，完成后点击<code>确定</code></p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\选择IOS镜像路径.png" srcset="/img/loading.gif" lazyload style="zoom:80%;">
+</li>
+<li><p>开启虚拟机，开始安装系统</p>
+<p><img src="/.io//BaiduNetdiskDownload\1.笔记\images\开启虚拟机.png" srcset="/img/loading.gif" lazyload></p>
+</li>
+<li><p>鼠标点击虚拟机屏幕，进入虚拟机（如需返回主机系统，同时按住<code>Ctrl</code>和<code>Alt</code>键），使用上下前切换安装选项，选中第一项<code>Install Centos 7</code>（白色为选中），然后点击回车键。</p>
+<p><img src="/.io//BaiduNetdiskDownload\1.笔记\images\开始安装系统.png" srcset="/img/loading.gif" lazyload></p>
+</li>
+<li><p>等待启动安装向导</p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\等待启动向导.png" srcset="/img/loading.gif" lazyload style="zoom:80%;">
+</li>
+<li><p>向导启动成功后，界面如下图所示</p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\安装向导已启动.png" srcset="/img/loading.gif" lazyload style="zoom:80%;">
+</li>
+<li><p>选择系统语言，推荐<code>中文</code>，完成后点击<code>继续</code></p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\选择系统语言.png" srcset="/img/loading.gif" lazyload style="zoom:80%;">
+</li>
+<li><p>选择系统时区，要求选择<code>亚洲/上海</code>。</p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\选择时区.png" srcset="/img/loading.gif" lazyload style="zoom:80%;">
+</li>
+<li><p>选择预置软件，推荐选择<code>Gnome</code></p>
+</li>
+</ol>
+   <img src="/.io//BaiduNetdiskDownload\1.笔记\images\软件选择.png" srcset="/img/loading.gif" lazyload style="zoom:80%;">
+
+<ol start="11">
+<li><p>选择系统安装位置，推荐使用自动配置分区</p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\安装位置.png" srcset="/img/loading.gif" lazyload style="zoom:80%;">
+</li>
+<li><p>关闭KDUMP，已节省资源</p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\关闭KDUMP.png" srcset="/img/loading.gif" lazyload style="zoom:80%;">
+</li>
+<li><p>上述内容设置完毕后，点击开始安装</p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\开始安装.png" srcset="/img/loading.gif" lazyload style="zoom:80%;">
+</li>
+<li><p>设置root用户密码</p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\设置root用户密码.png" srcset="/img/loading.gif" lazyload style="zoom:80%;">
+</li>
+<li><p>创建普通用户</p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\创建普通用户.png" srcset="/img/loading.gif" lazyload style="zoom:80%;">
+</li>
+<li><p>等待系统安装完成</p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\等待系统安装.png" srcset="/img/loading.gif" lazyload style="zoom:80%;">
+</li>
+<li><p>安装完成后，重启系统</p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\重启操作系统.png" srcset="/img/loading.gif" lazyload style="zoom:80%;">
+</li>
+<li><p>重启后，同意许可协议</p>
+<p><img src="/.io//BaiduNetdiskDownload\1.笔记\images\我同意协议.png" srcset="/img/loading.gif" lazyload></p>
+</li>
+<li><p>连接网络</p>
+<p><img src="/.io//BaiduNetdiskDownload\1.笔记\images\连接网络.png" srcset="/img/loading.gif" lazyload></p>
+<p><strong>注意：</strong></p>
+<p>若网络连接不成功，可按照以下步骤解决。</p>
+<ul>
+<li><p>检查主机是否联网，因为桥接模式下，虚拟机直接连接到主机所连接的网络。</p>
+</li>
+<li><p>配置虚拟网络编辑器</p>
+<ul>
+<li><p>打开虚拟网络编辑器</p>
+<p><img src="/.io//BaiduNetdiskDownload\1.笔记\images\虚拟网络编辑器.png" srcset="/img/loading.gif" lazyload></p>
+</li>
+<li><p>点击<code>更改设置</code></p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\更改设置.png" srcset="/img/loading.gif" lazyload style="zoom:80%;">
+</li>
+<li><p>修改桥接模式网络配置，将虚拟机桥接到主机联网所使用的网卡。</p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\选择目前主机联网所使用的网卡.png" srcset="/img/loading.gif" lazyload style="zoom:80%;"></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>完成后，点击<code>完成配置</code></p>
+<p><img src="/.io//BaiduNetdiskDownload\1.笔记\images\完成配置.png" srcset="/img/loading.gif" lazyload></p>
+</li>
+</ol>
+<h2 id="2-4-VMware使用技巧"><a href="#2-4-VMware使用技巧" class="headerlink" title="2.4 VMware使用技巧"></a>2.4 VMware使用技巧</h2><h3 id="2-4-1-系统快照"><a href="#2-4-1-系统快照" class="headerlink" title="2.4.1 系统快照"></a>2.4.1 系统快照</h3><p>所谓系统快照，就是将操作系统的当前状态保存下来，若将来系统出现不可修复的故障，便可使用快照恢复操作系统。下面演示VMware提供的快照功能。</p>
+<ol>
+<li><p><strong>拍摄快照</strong></p>
+<p>找到需要拍摄的虚拟机，执行如下操作</p>
+<p><img src="/.io//BaiduNetdiskDownload\1.笔记\images\拍摄快照.png" srcset="/img/loading.gif" lazyload></p>
+<p>填写快照信息</p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\快照名称和描述.png" srcset="/img/loading.gif" lazyload style="zoom:80%;">
+</li>
+<li><p><strong>误操作</strong></p>
+<p>假如失误删除了系统的一些重要文件，导致系统无法正常运行，例如下图所示</p>
+<p><img src="/.io//BaiduNetdiskDownload\1.笔记\images\误操作.png" srcset="/img/loading.gif" lazyload></p>
+<p>关机后再启动，发现无法进入系统。</p>
+</li>
+<li><p><strong>恢复快照</strong></p>
+<p>进入快照管理器</p>
+<p><img src="/.io//BaiduNetdiskDownload\1.笔记\images\快照管理器.png" srcset="/img/loading.gif" lazyload></p>
+<p>选中要恢复的快照，点击<code>转到</code>，即可将系统恢复到指定的状态。</p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\恢复快照.png" srcset="/img/loading.gif" lazyload style="zoom:80%;">
+</li>
+<li><p><strong>删除快照</strong></p>
+<p>若快照已经十分久远，失去其存在的意义，便可将其删除，具体操作如下图所示</p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\删除快照.png" srcset="/img/loading.gif" lazyload style="zoom:80%;"></li>
+</ol>
+<h3 id="2-4-2-克隆虚拟机"><a href="#2-4-2-克隆虚拟机" class="headerlink" title="2.4.2 克隆虚拟机"></a>2.4.2 克隆虚拟机</h3><p>顾名思义，克隆虚拟机就是将现有的虚拟机复制一份，得到一台和原有虚拟机配置完全相同的虚拟机，从而省去重复安装系统的繁琐工作。克隆虚拟机的具体操作如下</p>
+<ol>
+<li><p>将需要克隆的虚拟机关机</p>
+</li>
+<li><p>选中要克隆的虚拟机，并打开克隆向导</p>
+<p><img src="/.io//BaiduNetdiskDownload\1.笔记\images\打开克隆虚拟机向导.png" srcset="/img/loading.gif" lazyload></p>
+</li>
+<li><p>选择克隆状态，可选最新状态或者快照中的历史状态</p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\选择克隆状态.png" srcset="/img/loading.gif" lazyload style="zoom:80%;">
+</li>
+<li><p>选择克隆方式，推荐选择<code>完整克隆</code></p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\选择克隆方式.png" srcset="/img/loading.gif" lazyload style="zoom:80%;">
+</li>
+<li><p>填写新虚拟机的名称和安装目录，最后点击完成</p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\选择克隆位置.png" srcset="/img/loading.gif" lazyload style="zoom:80%;"></li>
+</ol>
+<h3 id="2-4-3-删除虚拟机"><a href="#2-4-3-删除虚拟机" class="headerlink" title="2.4.3 删除虚拟机"></a>2.4.3 删除虚拟机</h3><p>废弃不用的虚拟机可通过如下方式删除</p>
+<p><img src="/.io//BaiduNetdiskDownload\1.笔记\images\删除虚拟机.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="3-Linux文件系统目录结构"><a href="#3-Linux文件系统目录结构" class="headerlink" title="3. Linux文件系统目录结构"></a>3. Linux文件系统目录结构</h1><p>理解和熟悉Linux系统的文件系统目录结构，对于有效的管理和定位文件十分重要。Linux文件系统的目录结构如下图所示：</p>
+<p><img src="/.io//BaiduNetdiskDownload\1.笔记\images\Linux文件系统.drawio.png" srcset="/img/loading.gif" lazyload></p>
+<p>其中各目录的作用如下表所示</p>
+<table>
+<thead>
+<tr>
+<th>目录</th>
+<th>说明</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&#x2F;</td>
+<td>根目录</td>
+<td>根目录是整个文件系统的起点，所有其他目录和文件都位于根目录之下。</td>
+</tr>
+<tr>
+<td>&#x2F;home</td>
+<td>家目录</td>
+<td>每个用户的个人目录都位于这个目录下，通常以用户名命名。例如，用户<code>john</code>的主目录路径为<code>/home/john</code>。</td>
+</tr>
+<tr>
+<td>&#x2F;root</td>
+<td>root用户的家目录</td>
+<td>保存root用户的个人数据</td>
+</tr>
+<tr>
+<td>&#x2F;boot</td>
+<td>引导文件所在目录</td>
+<td>保存系统启动时所需的各种文件</td>
+</tr>
+<tr>
+<td>&#x2F;usr</td>
+<td>User System Resources的简写，说法不唯一</td>
+<td>存放用户可用的软件和程序文件，也包括了一些共享的数据和库文件。</td>
+</tr>
+<tr>
+<td>&#x2F;bin</td>
+<td>binary的简写</td>
+<td>存放系统的基本命令（如ls、cp等）和其余可执行文件。</td>
+</tr>
+<tr>
+<td>&#x2F;sbin</td>
+<td>system binary的简写</td>
+<td>存放系统管理和维护方面的二进制文件。</td>
+</tr>
+<tr>
+<td>&#x2F;etc</td>
+<td>etcetera的简写</td>
+<td>存放系统的配置文件，包括各种程序的配置文件和系统的全局配置文件。</td>
+</tr>
+<tr>
+<td>&#x2F;var</td>
+<td>variable的简写</td>
+<td>存放系统运行时产生的可变数据，如日志文件、数据库文件等。</td>
+</tr>
+<tr>
+<td>&#x2F;opt</td>
+<td>optional的简写</td>
+<td>存放一些可选的软件包，通常由用户自行安装。</td>
+</tr>
+<tr>
+<td>&#x2F;tmp</td>
+<td>temporary的简写</td>
+<td>存放临时文件，系统会定期清理该目录</td>
+</tr>
+</tbody></table>
+<h1 id="4-Linux交互界面"><a href="#4-Linux交互界面" class="headerlink" title="4. Linux交互界面"></a>4. Linux交互界面</h1><p>服务器中Linux系统，通常不会安装图形用户界面（GUI，Graphical User Interface），因此我们与操作系统的交互主要靠命令行界面（CLI，Command Line Interface），如下图所示</p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\命令行界面.png" srcset="/img/loading.gif" lazyload style="zoom:80%;">
+
+<p>在命令行界面，用户通过输入一些列命令来和操作系统进行交互，例如通过<code>mkdir /test</code>来创建<code>/test</code>目录。这些命令通常由shell解释并执行。</p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\Shell示意图.drawio.svg" srcset="/img/loading.gif" lazyload style="zoom:50%;">
+
+<h1 id="5-Linux常用命令"><a href="#5-Linux常用命令" class="headerlink" title="5. Linux常用命令"></a>5. Linux常用命令</h1><h2 id="5-1-文件和目录相关"><a href="#5-1-文件和目录相关" class="headerlink" title="5.1 文件和目录相关"></a>5.1 文件和目录相关</h2><ol>
+<li><p><strong>pwd（print working directory）</strong></p>
+<ul>
+<li><p><strong>作用</strong></p>
+<p>打印当前目录的绝对路径</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>基本语法</strong></p>
+<p><code>pwd</code></p>
+</li>
+<li><p><strong>案例实操</strong></p>
+<p>显示当前工作目录的绝对路径</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs 纯文本">[root@localhost ~]# pwd<br>/root<br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>ls（list）</strong></p>
+<ul>
+<li><p><strong>作用</strong></p>
+<p>列出目录内容</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>基本语法</strong></p>
+<p><code>ls [选项] [目录或是文件]</code></p>
+</li>
+<li><p><strong>选项说明</strong></p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-a</td>
+<td>全部的文件，连同隐藏文件( 开头为 . 的文件) 一起列出来</td>
+</tr>
+<tr>
+<td>-l</td>
+<td>使用较长（详细）的格式列出信息，包含文件的属性与权限等等数据</td>
+</tr>
+</tbody></table>
+</li>
+<li><p><strong>实操案例</strong></p>
+<p>查看当前目录的所有内容信息</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs 纯文本">[atguigu@localhost ~]$ ls -al<br>总用量 44<br>drwx------. 5 atguigu atguigu 4096 5月  27 15:15 .<br>drwxr-xr-x. 3 root    root    4096 5月  27 14:03 ..<br>drwxrwxrwx. 2 root    root    4096 5月  27 14:14 hello<br>-rwxrw-r--. 1 atguigu atguigu   34 5月  27 14:20 test.txt<br>ls ./ 查看当前目录<br>man ls ：ch<br></code></pre></td></tr></table></figure>
+</li>
+<li><p><strong>显示说明</strong></p>
+<p>每行列出的信息依次是： 文件类型与权限 链接数 文件属主 文件属组 文件大小 最近修改时间 文件名</p>
+</li>
+</ul>
+</li>
+<li><p><strong>cd（change directory）</strong></p>
+<ul>
+<li><p><strong>作用</strong></p>
+<p>切换路径</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>基本语法</strong></p>
+<p><code>cd [参数]</code></p>
+</li>
+<li><p><strong>参数说明</strong></p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>cd 绝对路径</td>
+<td><strong>切换路径</strong></td>
+</tr>
+<tr>
+<td>cd 相对路径</td>
+<td><strong>切换路径</strong></td>
+</tr>
+<tr>
+<td>cd ~或者cd</td>
+<td>回到自己的家目录</td>
+</tr>
+<tr>
+<td>cd -</td>
+<td>回到上一次所在目录</td>
+</tr>
+<tr>
+<td>cd ..</td>
+<td>回到当前目录的上一级目录</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+</li>
+<li><p>**mkdir（Make Directory） **</p>
+<ul>
+<li><p><strong>作用</strong></p>
+<p>创建目录</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>基本语法</strong></p>
+<p><code>mkdir [选项] 要创建的目录</code></p>
+</li>
+<li><p><strong>选项说明</strong></p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-p</td>
+<td>创建多层目录</td>
+</tr>
+</tbody></table>
+</li>
+<li><p><strong>实操案例</strong></p>
+<ul>
+<li>创建一个目录</li>
+</ul>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs text">[root@localhost ~]# mkdir hello<br><br>[root@localhost ~]# mkdir hello/world<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>创建一个多级目录</li>
+</ul>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">[root@localhost ~]# mkdir -p big/world<br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>cp（copy）</strong></p>
+<ul>
+<li><p><strong>作用</strong></p>
+<p>复制文件或目录</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>基本语法</strong></p>
+<p><code>cp [选项] source dest</code></p>
+</li>
+<li><p><strong>选项说明</strong></p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-r</td>
+<td>递归复制整个文件夹</td>
+</tr>
+</tbody></table>
+</li>
+<li><p><strong>参数说明</strong></p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>source</td>
+<td>源文件</td>
+</tr>
+<tr>
+<td>dest</td>
+<td>目标文件</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>实操案例</p>
+<ul>
+<li>复制文件</li>
+</ul>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">[root@localhost ~]# cp ./initial-setup-ks.cfg ./hello<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>递归复制整个文件夹</li>
+</ul>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">[root@localhost ~]# cp -r ./big ./hello<br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>rm（remove）</strong></p>
+<ul>
+<li><p><strong>作用</strong></p>
+<p>移除文件或者目录</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>基本语法</strong></p>
+<p><code>rm [选项] deleteFile</code></p>
+</li>
+<li><p><strong>选项说明</strong></p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-r</td>
+<td>递归删除目录所有内容</td>
+</tr>
+<tr>
+<td>-f</td>
+<td>强制删除,不提示用户进行确认</td>
+</tr>
+</tbody></table>
+</li>
+<li><p><strong>实操案例</strong></p>
+<ul>
+<li>递归删除目录中所有内容</li>
+</ul>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">[root@localhost ~]# rm -rf ./big<br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>mv（move）</strong></p>
+<ul>
+<li><p><strong>作用</strong></p>
+<p>移动或重命名文件</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>基本语法</strong></p>
+<ul>
+<li><p>移动文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs 纯文本">mv 源文件 目标目录<br></code></pre></td></tr></table></figure></li>
+</ul>
+<ul>
+<li><p>重命名</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">mv</span> 源文件 目标文件<br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>案例实操</strong></p>
+<ul>
+<li><p>移动文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs 纯文本">[root@localhost ~]# cd hello/<br>[root@localhost hello]# mv initial-setup-ks.cfg world/<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>移动文件并重命名</p>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs autoit">[root<span class="hljs-symbol">@localhost</span> world]<span class="hljs-meta"># mv initial-setup-ks.cfg ../hello.cfg</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>重命名</p>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs autoit">[root<span class="hljs-symbol">@localhost</span> hello]<span class="hljs-meta"># mv hello.cfg initial-setup-ks.cfg</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>cat</strong></p>
+<ul>
+<li><p><strong>作用</strong></p>
+<p>查看文件内容</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>基本语法</strong></p>
+<p><code>cat  [选项] 文件</code></p>
+</li>
+<li><p><strong>选项说明</strong></p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>功能描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>- n</td>
+<td>显示所有行的行号,包括空行</td>
+</tr>
+</tbody></table>
+</li>
+<li><p><strong>实操案例</strong></p>
+<p>查看文件内容并显示行号</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs 纯文本">[atguigu@localhost ~]$ cat -n hello.cfg<br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>tail</strong> </p>
+<ul>
+<li><p><strong>作用</strong></p>
+<p>输出文件尾部内容</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>基本语法</strong></p>
+<ul>
+<li><code>tail 文件</code>（功能描述：查看文件后10行内容）</li>
+<li><code>tail -n 5 文件</code>（功能描述：查看文件后5行内容，5可以是任意行数）</li>
+<li><code>tail -f 文件</code>（功能描述：实时追踪该文档的所有更新）</li>
+</ul>
+</li>
+<li><p><strong>选项说明</strong></p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-n&lt;行数&gt;</td>
+<td>输出文件尾部n行内容</td>
+</tr>
+<tr>
+<td>-f</td>
+<td>显示文件最新追加的内容，监视文件变化</td>
+</tr>
+</tbody></table>
+</li>
+<li><p><strong>实操案例</strong></p>
+<ul>
+<li>查看文件最后50行内容</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs 纯文本">[root@localhost ~]# tail -n 50 helle.cfg<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>实时追踪该档的所有更新</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs 纯文本">[root@localhost ~]# tail -f hello.cfg<br>ctrl + c ：进行命令中断<br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+<h2 id="5-2-文本编辑相关"><a href="#5-2-文本编辑相关" class="headerlink" title="5.2 文本编辑相关"></a>5.2 文本编辑相关</h2><p><img src="/.io//BaiduNetdiskDownload\1.笔记\images\vim.png" srcset="/img/loading.gif" lazyload></p>
+<p>在命令行界面下，最常用的文本编辑器就是<strong>Vi&#x2F;Vim</strong>。其中<strong>Vi</strong> 是 Linux操作系统中最通用的文本编辑器。 <strong>Vim</strong>编辑器是<strong>Vi</strong>的增强版，相较于<strong>Vi</strong>，提供了代码高亮等功能。两者用法完全兼容。下面介绍<strong>Vim</strong>的用法。</p>
+<ul>
+<li><p><strong>基础语法</strong></p>
+<p><code>vim 文件</code> </p>
+</li>
+<li><p><strong>Vim模式介绍</strong></p>
+<p>Vim文编辑器有不同的工作模式，在不同模式下，可执行不同的操作，主要模式有</p>
+<ul>
+<li><strong>普通模式（Normal Mode）</strong>：用于删除、复制、粘贴等基本操作。</li>
+<li><strong>编辑模式（Insert Mode）</strong>：用于编辑文本。</li>
+<li><strong>命令行模式（Command Mode）</strong>：用于执行命令，如保存、退出等。</li>
+</ul>
+<p>下图为各模式之间的切换方法</p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\Vim模式介绍.drawio.svg" srcset="/img/loading.gif" lazyload style="zoom: 50%;"></li>
+</ul>
+<p>下面分别介绍各模式下的用法</p>
+<ul>
+<li><p><strong>编辑模式</strong></p>
+<p>编辑模式下，可进行正常的编辑操作，可在编辑模式下和其他模式下灵活切换，提高编辑效率。</p>
+</li>
+<li><p><strong>一般模式</strong></p>
+<p>在这个模式中， 可以使用上下左右按键来移动光标，也开通过一些简单的操作来复制粘贴以及删除文本，具体操作如下</p>
+<ul>
+<li><p>光标操作</p>
+<table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>操作</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>shift+6(^)</code></td>
+<td>移动到行头</td>
+</tr>
+<tr>
+<td><code>shift+4($)</code></td>
+<td>移动到行尾</td>
+</tr>
+<tr>
+<td><code>shift+g</code></td>
+<td>移动到页尾</td>
+</tr>
+<tr>
+<td><code>gg</code></td>
+<td>移动到页头</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>复制粘贴操作</p>
+<table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>操作</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>yy</code></td>
+<td>复制光标当前行</td>
+</tr>
+<tr>
+<td><code>yw</code></td>
+<td>复制光标当前词</td>
+</tr>
+<tr>
+<td><code>p</code></td>
+<td>粘贴</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>删除操作</p>
+<table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>操作</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>dd</code></td>
+<td>删除光标当前行</td>
+</tr>
+<tr>
+<td><code>d n d</code></td>
+<td>删除当前光标所处行及其以下共n行</td>
+</tr>
+<tr>
+<td><code>x</code></td>
+<td>删除当前光标处的一个字符</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+</li>
+<li><p><strong>命令模式</strong></p>
+<p>命令模式下可通过一些命令实现存盘、退出、显示行号、搜索、批量替换等功能，具体命令如下</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>操作</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>:w</code></td>
+<td>保存</td>
+</tr>
+<tr>
+<td><code>:q</code></td>
+<td>退出</td>
+</tr>
+<tr>
+<td><code>:!</code></td>
+<td>强制执行</td>
+</tr>
+<tr>
+<td><code>:set nu</code></td>
+<td>显示行号</td>
+</tr>
+<tr>
+<td><code>:set nonu</code></td>
+<td>取消行号</td>
+</tr>
+<tr>
+<td><code>/文本</code></td>
+<td>搜索文本，输入n：光标指向下一个，输入N：贯标指向上一个</td>
+</tr>
+<tr>
+<td><code>:nohl</code></td>
+<td>搜索文本后，匹配内容会高亮显示，该命令可取消高亮</td>
+</tr>
+<tr>
+<td><code>:s/old/new/g</code></td>
+<td>在全局范围内使用new替换old内容</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h2 id="5-3-文件权限相关"><a href="#5-3-文件权限相关" class="headerlink" title="5.3 文件权限相关"></a>5.3 文件权限相关</h2><h3 id="5-3-1-文件权限概述"><a href="#5-3-1-文件权限概述" class="headerlink" title="5.3.1 文件权限概述"></a>5.3.1 文件权限概述</h3><p>Linux中的所有文件均有严格的访问权限控制，只有当用户拥有某个文件的相关权限时，才可对文件执行相关操作。</p>
+<p><strong>权限系统相关概念</strong></p>
+<ul>
+<li><p><strong>用户和用户组</strong></p>
+<p>在Linux系统中注册的个体称为一个<strong>用户</strong>，例如root和atguigu，除此之外还能使用<code>useradd &lt;用户名&gt;</code>命令创建新的用户。每个用户都可以属于一个或多个<strong>用户组</strong>，可以使用<code>groups &lt;用户名&gt;</code>命令查看用户所属的组，使用<code>usermod -g &lt;新组名&gt; &lt;用户名&gt;</code>修改用户所属组。</p>
+<p>每个文件或者目录都有一个所属用户和一个所属组。</p>
+</li>
+<li><p><strong>文件权限</strong></p>
+<p>在Linux中，文件和目录的权限主要分为三个部分：读（read）、写（write）和执行（execute）。</p>
+<ul>
+<li><strong>读权限</strong>，表示可以读取文件的内容或者查看目录的内容。</li>
+<li><strong>写权限</strong>，表示可以修改文件内容或者在目录中创建、删除文件。</li>
+<li><strong>执行权限</strong>，表示可以运行可执行文件或者进入目录。</li>
+</ul>
+</li>
+<li><p><strong>权限字符串</strong>：</p>
+<p>在Linux系统中，文件和目录的权限用一组字符来表示，通常以<code>rwxr-xr--</code>的形式呈现，其中<code>r</code>、<code>w</code>、<code>x</code>分别表示读、写和执行权限。以下是权限字符的含义：</p>
+<ul>
+<li><p>第1-3位确定属主（该文件的所有者）拥有该文件的权限。</p>
+</li>
+<li><p>第4-6位确定属组（所有者的同组用户）拥有该文件的权限。</p>
+</li>
+<li><p>第7-9位确定其他用户拥有该文件的权限。</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>思考题</strong></p>
+<p>若某文件的权限字符串为<code>rwxr-xr--</code>，请分析该文件的权限策略。</p>
+<h3 id="5-3-2-常用命令"><a href="#5-3-2-常用命令" class="headerlink" title="5.3.2 常用命令"></a>5.3.2 常用命令</h3><ol>
+<li><p><strong>chmod（change mode）</strong></p>
+<ul>
+<li><p><strong>作用</strong></p>
+<p>修改文件或目录权限</p>
+</li>
+<li><p><strong>基本语法</strong></p>
+<ul>
+<li><p><code>chmod [选项] [u/g/o/a][+/-/=][r/w/x] 文件或目录</code></p>
+<ul>
+<li>u：user</li>
+<li>g：group</li>
+<li>o：other</li>
+<li>a：all</li>
+</ul>
+</li>
+<li><p><code>chmod [选项] 777 文件或目录</code></p>
+<table>
+<thead>
+<tr>
+<th>权限表示法</th>
+<th>user</th>
+<th>group</th>
+<th>other</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>字符串</td>
+<td>rwx</td>
+<td>r-x</td>
+<td>rw-</td>
+</tr>
+<tr>
+<td>数字（二进制）</td>
+<td>111</td>
+<td>101</td>
+<td>110</td>
+</tr>
+<tr>
+<td>数字（八进制）</td>
+<td>7</td>
+<td>5</td>
+<td>6</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+</li>
+<li><p><strong>选项说明</strong></p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-R</td>
+<td>递归操作</td>
+</tr>
+</tbody></table>
+<ul>
+<li><p><strong>实操案例</strong></p>
+<ul>
+<li>修改文件使其所属主用户具有执行权限</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs 纯文本">[root@localhost ~]# chmod u+x hello.cfg<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>修改文件使其所属组用户具有执行权限</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs 纯文本">[root@localhost ~]# chmod g+x hello.cfg<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>修改文件所属主用户执行权限,并使其他用户具有执行权限</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs 纯文本">[root@localhost ~]# chmod u-x,o+x hello.cfg<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>采用数字的方式，设置文件所有者、所属组、其他用户都具有可读可写可执行权限。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs 纯文本">[root@localhost ~]# chmod 777 hello.txt<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>修改整个文件夹里面的所有文件的所有者、所属组、其他用户都具有可读写执行权限。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs 纯文本">[root@localhost ~]# chmod -R 777 hello/<br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>chown（change owner）</strong></p>
+<ul>
+<li><p><strong>作用</strong></p>
+<p>改变文件或目录所有者</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>基本语法</strong></p>
+<p><code>chown [选项] 用户[:用户组] 文件或目录</code></p>
+<ul>
+<li><p><strong>选项说明</strong></p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-R</td>
+<td>递归操作</td>
+</tr>
+</tbody></table>
+</li>
+<li><p><strong>实操案例</strong></p>
+<ul>
+<li>修改文件所有者</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs 纯文本">[root@localhost ~]# chown atguigu helle.cfg <br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>递归改变文件所有者和所有组</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs 纯文本">[root@localhost ~]# chown -R atguigu:atguigu hello/<br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="5-4-进程管理相关"><a href="#5-4-进程管理相关" class="headerlink" title="5.4 进程管理相关"></a>5.4 进程管理相关</h2><p>操作系统中正在运行的一个程序称为一个进程。</p>
+<ul>
+<li><p><strong>查看进程</strong></p>
+<p>可以使用<code>ps</code>（process status）命令查看操作系统中当前的进程。</p>
+<ul>
+<li><p><strong>常见用法</strong></p>
+<ul>
+<li><p><strong><code>ps aux</code></strong></p>
+<p>选项说明如下</p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>a</td>
+<td>显示所有前台进程</td>
+</tr>
+<tr>
+<td>u</td>
+<td>以用户友好的方式打印进程信息</td>
+</tr>
+<tr>
+<td>x</td>
+<td>显示后台进程</td>
+</tr>
+</tbody></table>
+<p><code>ps aux</code>显示内容如下</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">USER</span>        PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND<br><span class="hljs-attribute">root</span>          <span class="hljs-number">1</span>  <span class="hljs-number">0</span>.<span class="hljs-number">0</span>  <span class="hljs-number">0</span>.<span class="hljs-number">1</span> <span class="hljs-number">193964</span>  <span class="hljs-number">7048</span> ?        Ss   <span class="hljs-number">08</span>:<span class="hljs-number">56</span>   <span class="hljs-number">0</span>:<span class="hljs-number">01</span> /usr/lib/systemd/systemd<br><span class="hljs-attribute">root</span>          <span class="hljs-number">2</span>  <span class="hljs-number">0</span>.<span class="hljs-number">0</span>  <span class="hljs-number">0</span>.<span class="hljs-number">0</span>      <span class="hljs-number">0</span>     <span class="hljs-number">0</span> ?        S    <span class="hljs-number">08</span>:<span class="hljs-number">56</span>   <span class="hljs-number">0</span>:<span class="hljs-number">00</span><span class="hljs-meta"> [kthreadd]</span><br><span class="hljs-attribute">root</span>          <span class="hljs-number">4</span>  <span class="hljs-number">0</span>.<span class="hljs-number">0</span>  <span class="hljs-number">0</span>.<span class="hljs-number">0</span>      <span class="hljs-number">0</span>     <span class="hljs-number">0</span> ?        S&lt;   <span class="hljs-number">08</span>:<span class="hljs-number">56</span>   <span class="hljs-number">0</span>:<span class="hljs-number">00</span><span class="hljs-meta"> [kworker/0:0H]</span><br><span class="hljs-attribute">root</span>          <span class="hljs-number">5</span>  <span class="hljs-number">0</span>.<span class="hljs-number">0</span>  <span class="hljs-number">0</span>.<span class="hljs-number">0</span>      <span class="hljs-number">0</span>     <span class="hljs-number">0</span> ?        S    <span class="hljs-number">08</span>:<span class="hljs-number">56</span>   <span class="hljs-number">0</span>:<span class="hljs-number">00</span><span class="hljs-meta"> [kworker/u256:0]</span><br></code></pre></td></tr></table></figure>
+
+<p>注：</p>
+<ul>
+<li><strong>USER</strong>：启动该进程的用户</li>
+<li><strong>PID</strong>：进程ID</li>
+<li><strong>%CPU</strong>：该进程占用CPU资源的百分比</li>
+<li><strong>%MEM</strong>：该进程占用物理内存的百分比</li>
+<li><strong>COMMAND</strong>：产生此进程的命令名</li>
+</ul>
+</li>
+<li><p><strong><code>ps -ef</code></strong></p>
+<p>选项说明如下</p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-e</td>
+<td>显示所有进程</td>
+</tr>
+<tr>
+<td>-f</td>
+<td>以完整的格式显示进程的详细信息</td>
+</tr>
+</tbody></table>
+<p><code>ps -ef</code>显示内容如下</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">UID</span>         PID   PPID  C STIME TTY          TIME CMD<br><span class="hljs-attribute">root</span>          <span class="hljs-number">1</span>      <span class="hljs-number">0</span>  <span class="hljs-number">0</span> <span class="hljs-number">08</span>:<span class="hljs-number">56</span> ?        <span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">01</span> /usr/lib/systemd/systemd <br><span class="hljs-attribute">root</span>          <span class="hljs-number">2</span>      <span class="hljs-number">0</span>  <span class="hljs-number">0</span> <span class="hljs-number">08</span>:<span class="hljs-number">56</span> ?        <span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span><span class="hljs-meta"> [kthreadd]</span><br><span class="hljs-attribute">root</span>          <span class="hljs-number">4</span>      <span class="hljs-number">2</span>  <span class="hljs-number">0</span> <span class="hljs-number">08</span>:<span class="hljs-number">56</span> ?        <span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span><span class="hljs-meta"> [kworker/0:0H]</span><br><span class="hljs-attribute">root</span>          <span class="hljs-number">5</span>      <span class="hljs-number">2</span>  <span class="hljs-number">0</span> <span class="hljs-number">08</span>:<span class="hljs-number">56</span> ?        <span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span><span class="hljs-meta"> [kworker/u256:0]</span><br><span class="hljs-attribute">root</span>          <span class="hljs-number">6</span>      <span class="hljs-number">2</span>  <span class="hljs-number">0</span> <span class="hljs-number">08</span>:<span class="hljs-number">56</span> ?        <span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span><span class="hljs-meta"> [ksoftirqd/0]</span><br><span class="hljs-attribute">root</span>          <span class="hljs-number">7</span>      <span class="hljs-number">2</span>  <span class="hljs-number">0</span> <span class="hljs-number">08</span>:<span class="hljs-number">56</span> ?        <span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span><span class="hljs-meta"> [migration/0]</span><br></code></pre></td></tr></table></figure>
+
+<p>注：</p>
+<ul>
+<li><strong>UID</strong>：用户ID </li>
+<li><strong>PID</strong>：进程ID </li>
+<li><strong>PPID</strong>：父进程ID </li>
+<li><strong>CMD</strong>：启动进程所用的命令和参数</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>使用技巧</strong></p>
+<p>日常查看进程时，通常会将上述命令与<code>grep</code>命令配合使用，<code>grep</code>可用于过滤文本行。</p>
+<p>例如想查看所有的Java进程，便可执行以下命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ps -ef | grep java<br></code></pre></td></tr></table></figure>
+
+<p><code>|</code>符号称为管道符，其作用是将前边命令的输出作为下一命令的输入。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>终止进程</strong></p>
+<p>若想停止进程，可使用<code>kill</code>命令，其用法如下</p>
+<ul>
+<li><p>基本语法</p>
+<p><code>kill [选项] 进程号</code></p>
+</li>
+<li><p>选项说明</p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-9</td>
+<td>表示强迫进程立即停止</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>案例实操，启动火狐浏览器，并杀死相关进程。</p>
+<p>提示：火狐浏览器的英文名称为firefox。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-6-压缩归档相关"><a href="#5-6-压缩归档相关" class="headerlink" title="5.6 压缩归档相关"></a>5.6 压缩归档相关</h2><ol>
+<li><p><strong>zip&#x2F;unzip</strong></p>
+<p><code>zip/unzip</code>可用于压缩和解压缩zip文件，使用方式如下</p>
+<ul>
+<li><p><strong>基本语法</strong></p>
+<p><code>zip [选项] XXX.zip 文件或路径</code><br><code>unzip [选项] XXX.zip   </code> </p>
+</li>
+<li><p><strong>选项说明</strong></p>
+<table>
+<thead>
+<tr>
+<th>zip选项</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-r</td>
+<td>压缩目录</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>unzip选项</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-d 目录</td>
+<td>指定解压后文件的存放目录</td>
+</tr>
+</tbody></table>
+</li>
+<li><p><strong>案例实操</strong></p>
+<ul>
+<li><p>压缩文件</p>
+<p>创建两个文件<code>file1.txt</code>和<code>file2.txt</code>，并将其压缩为<code>first.zip</code></p>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs autoit">[root<span class="hljs-symbol">@localhost</span> ~]<span class="hljs-meta"># vim file1.txt</span><br>[root<span class="hljs-symbol">@localhost</span> ~]<span class="hljs-meta"># vim file2.txt</span><br><br>[root<span class="hljs-symbol">@localhost</span> ~]<span class="hljs-meta"># zip first.zip file1.txt file2.txt</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>压缩目录</p>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs autoit">[root<span class="hljs-symbol">@lcoalhost</span> ~]<span class="hljs-meta"># zip -r hello.zip hello</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>解压</p>
+<p>创建一个<code>zip</code>目录，并将<code>first.zip</code>中的内容解压到<code>zip</code>目录</p>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs autoit">[root<span class="hljs-symbol">@lcoalhost</span> ~]<span class="hljs-meta"># mkdir zip</span><br>[root<span class="hljs-symbol">@lcoalhost</span> ~]<span class="hljs-meta"># unzip first.zip -d zip/</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>tar</strong></p>
+<p><code>tar</code>可用于对文件进行归档（打包）和压缩，使用方式如下</p>
+<ul>
+<li><p><strong>基本语法</strong></p>
+<p>打包：<code>tar [选项] -c -f 包名 文件1 文件2 文件3 ...</code></p>
+<p>解包：<code>tar [选项] -x -f 包名 -C 指定目录 </code></p>
+</li>
+<li><p><strong>选项说明</strong></p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>功能</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-c</td>
+<td>打包</td>
+<td></td>
+</tr>
+<tr>
+<td>-x</td>
+<td>解包</td>
+<td></td>
+</tr>
+<tr>
+<td>-z</td>
+<td>打包的同时进行压缩（解包的时候进行解压）</td>
+<td></td>
+</tr>
+<tr>
+<td>-v</td>
+<td>打包或解包时显示正在处理的文件信息</td>
+<td></td>
+</tr>
+<tr>
+<td>-f 包名</td>
+<td>指定打包后的文件名后者要解包的文件名</td>
+<td></td>
+</tr>
+<tr>
+<td>-C 目录</td>
+<td>解包到指定目录</td>
+<td></td>
+</tr>
+</tbody></table>
+</li>
+<li><p><strong>案例实操</strong></p>
+<ul>
+<li><p>打包<code>file1.txt</code>和<code>file2.txt</code>到<code>first.tar</code></p>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs autoit">[root<span class="hljs-symbol">@lcoalhost</span> ~]<span class="hljs-meta"># tar -cvf first.tar file1.txt file2.txt</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>打包并压缩<code>file1.txt</code>和<code>file2.txt</code>到<code>first.tar.gz</code></p>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs autoit">[root<span class="hljs-symbol">@lcoalhost</span> ~]<span class="hljs-meta"># tar -zcvf first.tar.gz file1.txt file2.txt</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>解包并解压<code>first.tar.gz</code>到<code>tar</code>目录</p>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs autoit">[root<span class="hljs-symbol">@lcoalhost</span> ~]<span class="hljs-meta"># mkdir tar</span><br>[root<span class="hljs-symbol">@lcoalhost</span> ~]<span class="hljs-meta"># tar -zxvf first.tar.gz -C ./tar</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="5-7-安装应用相关"><a href="#5-7-安装应用相关" class="headerlink" title="5.7 安装应用相关"></a>5.7 安装应用相关</h2><h3 id="5-7-1-RPM离线安装"><a href="#5-7-1-RPM离线安装" class="headerlink" title="5.7.1 RPM离线安装"></a>5.7.1 <strong>RPM离线安装</strong></h3><ol>
+<li><p><strong>RPM概述</strong></p>
+<p>RPM（RedHat Package Manager），RedHat软件包管理工具，在基于 RedHat 的 Linux 发行版中广泛使用。常见软件包如下<code>Apache-1.3.23-11.i386.rpm</code>，类似于Windows系统中的<code>exe</code>文件。</p>
+</li>
+<li><p><strong>rpm命令</strong></p>
+<p>可以使用<code>rpm</code>命令安装、卸载和查看系统中的应用，具体用法如下</p>
+<ul>
+<li><p><strong>安装</strong></p>
+<ul>
+<li><p>基本语法</p>
+<p><code>rpm -ivh 软件包路径</code></p>
+</li>
+<li><p>选项说明</p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-i</td>
+<td>-i&#x3D;install，安装</td>
+</tr>
+<tr>
+<td>-v</td>
+<td>-v&#x3D;verbose，显示详细信息</td>
+</tr>
+<tr>
+<td>-h</td>
+<td>-h&#x3D;hash，进度条</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>案例实操</p>
+<p>在以下地址下载一个<em><strong>sl软件</strong></em>的rpm安装包，并安装</p>
+<p>下载地址：<a target="_blank" rel="noopener" href="https://dl.fedoraproject.org/pub/epel/7/x86_64/Packages/s/sl-5.02-1.el7.x86_64.rpm">https://dl.fedoraproject.org/pub/epel/7/x86_64/Packages/s/sl-5.02-1.el7.x86_64.rpm</a></p>
+</li>
+</ul>
+</li>
+<li><p><strong>查看</strong></p>
+<ul>
+<li><p>基本语法</p>
+<p><code>rpm -qa</code>（功能描述：查询所安装的所有rpm软件包）</p>
+</li>
+<li><p>选项说明</p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-q</td>
+<td>查询模式</td>
+</tr>
+<tr>
+<td>-a</td>
+<td>表示所有</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>案例实操</p>
+<p>查询刚刚安装的软件</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vim">[root@localhost ~]# rpm -<span class="hljs-keyword">qa</span> | <span class="hljs-keyword">grep</span> <span class="hljs-keyword">sl</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p><strong>卸载</strong></p>
+<ul>
+<li><p>基本语法</p>
+<p><code>rpm -e 软件包名 </code></p>
+</li>
+<li><p>案例实操</p>
+<p>卸载刚刚安装的sl软件</p>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs autoit">[root<span class="hljs-symbol">@localhost</span> ~]<span class="hljs-meta"># rpm -e sl-5.02-1.el7.x86_64</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="5-7-2-Yum在线安装"><a href="#5-7-2-Yum在线安装" class="headerlink" title="5.7.2 Yum在线安装"></a>5.7.2 <strong>Yum在线安装</strong></h3><ol>
+<li><p><strong>Yum概述</strong></p>
+<p>YUM（全称为 Yellowdog Updater Modified）是一个Linux软件包管理器。基于RPM包管理，能够从指定的服务器自动下载RPM包并且安装，并且可以<strong>自动处理依赖关系</strong>，并且一次安装所有依赖的软件包，无须繁琐地一次次下载、安装，该功能类似在JAVA中使用Maven工具从远程仓库中下载依赖一样,可以自动处理依赖关系。</p>
+</li>
+<li><p><strong>yum命令</strong></p>
+<p>可以使用yum安装和卸载应用，具体用法如下</p>
+<ul>
+<li><p><strong>安装软件包</strong></p>
+<ul>
+<li><p>基本语法</p>
+<p><code>yum [选项] install 软件包名</code></p>
+</li>
+<li><p>选项说明</p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-y</td>
+<td>对所有提问都回答“yes”</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>案例实操</p>
+<p>使用yum在线安装<em><strong>sl</strong></em>软件</p>
+<ul>
+<li><p>查询sl软件的包名</p>
+<p>可在如下网站搜索Linux中的各种软件包，地址为<a target="_blank" rel="noopener" href="https://pkgs.org/%EF%BC%8C%E6%90%9C%E7%B4%A2sl%EF%BC%8C%E5%B9%B6%E6%9F%A5%E7%9C%8B%E5%AF%B9%E5%BA%94%E7%9A%84Linux%E5%8F%91%E8%A1%8C%E7%89%88%EF%BC%8C%E6%90%9C%E7%B4%A2%E7%BB%93%E6%9E%9C%E4%B8%BA%60yum">https://pkgs.org/，搜索sl，并查看对应的Linux发行版，搜索结果为`yum</a> install sl&#96;。</p>
+</li>
+<li><p>执行yum安装命令</p>
+<p>执行<code>yum install sl</code>后的结果为</p>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs armasm">没有可用软件包 <span class="hljs-built_in">sl</span>。<br>错误：无须任何处理<br></code></pre></td></tr></table></figure>
+
+<p>原因分析，yum的工作原理是从我们所配置的远程仓库下载rpm包，然后进行安装，远程仓库的配置文件位于<code>/etc/yum.repo.d/</code>目录中。上述问题的原因就是sl软件的rpm包不在系统预先配置的这些远程仓库中。因此需要先配置sl所在的远程仓库，才可使用yum进行安装，具体操作如下。</p>
+</li>
+<li><p>配置远程仓库</p>
+<p>远程仓库可手动配置，也可在线配置，下面在线配置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs undefined">[root@localhost ~]# yum -y install epel-release <br></code></pre></td></tr></table></figure>
+
+<p>完成后观察<code>/etc/yum.repo.d/</code>目录下配置文件的变化。</p>
+</li>
+<li><p>重新安装sl</p>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs autoit">[root<span class="hljs-symbol">@localhost</span> ~]<span class="hljs-meta"># yum -y install sl</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>卸载软件包</strong></p>
+<ul>
+<li><p>基本语法</p>
+<p><code>yum remove 软件包名</code></p>
+</li>
+</ul>
+</li>
+<li><p><strong>案例实操</strong></p>
+<p>卸载sl软件</p>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs autoit">[root<span class="hljs-symbol">@localhost</span> ~]<span class="hljs-meta"># yum remove sl</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+<h1 id="6-Linux系统远程访问"><a href="#6-Linux系统远程访问" class="headerlink" title="6. Linux系统远程访问"></a>6. Linux系统远程访问</h1><p>多数情况下，工作时所用的服务器并不在身边，这些计算机要么位于机房，要么位于云端，因此我们不能向操作个人电脑一样操作服务器，而是需要通过远程登录的方式来操作。</p>
+<h2 id="6-1-SSH概述"><a href="#6-1-SSH概述" class="headerlink" title="6.1 SSH概述"></a>6.1 SSH概述</h2><p>SSH（Secure Shell）使用一种网络协议，用于在计算机之间建立加密的连接，从而允许用户以安全的方式在远程的计算机中执行命令。</p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\SSH.drawio.png" srcset="/img/loading.gif" lazyload style="zoom:50%;">
+
+<h2 id="6-2-SSH实操"><a href="#6-2-SSH实操" class="headerlink" title="6.2 SSH实操"></a>6.2 SSH实操</h2><p>Linux系统中都会预装SSH服务，因此我们只需在自己的个人电脑安装SSH客户端，然后配置连接即可。可以选择的SSH客户端有很多，目前，比较主流的有 Xshell, SecureCRT，FinalShell，MobaXterm 等，同学们可以根据自己的习惯自行选择。本课程使用MobaXterm，下面演示具体使用方式。</p>
+<ol>
+<li><p>在Windows主机安装MobaXterm软件，安装包位于项目资料中。</p>
+</li>
+<li><p>查询虚拟机IP地址</p>
+<p>使用<code>ifconfig</code>（network interfaces configuring）命令可查看虚拟机ip地址，其输出内容如下</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">ens33</span>: flags=<span class="hljs-number">4163</span>&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu <span class="hljs-number">1500</span><br>        <span class="hljs-attribute">inet</span> <span class="hljs-number">172.17.0.104</span>  netmask <span class="hljs-number">255.255.255.0</span>  broadcast <span class="hljs-number">172.17.0.255</span><br>        <span class="hljs-attribute">inet6</span> fe80::<span class="hljs-number">5</span>fdd:f01e:a4fb:<span class="hljs-number">966</span>  prefixlen <span class="hljs-number">64</span>  scopeid <span class="hljs-number">0</span>x20&lt;link&gt;<br>        <span class="hljs-attribute">ether</span> <span class="hljs-number">00</span>:<span class="hljs-number">0</span>c:<span class="hljs-number">29</span>:fc:a3:fe  txqueuelen <span class="hljs-number">1000</span>  (Ethernet)<br>        <span class="hljs-attribute">RX</span> packets <span class="hljs-number">183030</span>  bytes <span class="hljs-number">70503744</span> (<span class="hljs-number">67</span>.<span class="hljs-number">2</span> MiB)<br>        <span class="hljs-attribute">RX</span> errors <span class="hljs-number">0</span>  dropped <span class="hljs-number">78</span>  overruns <span class="hljs-number">0</span>  frame <span class="hljs-number">0</span><br>        <span class="hljs-attribute">TX</span> packets <span class="hljs-number">23385</span>  bytes <span class="hljs-number">1917128</span> (<span class="hljs-number">1</span>.<span class="hljs-number">8</span> MiB)<br>        <span class="hljs-attribute">TX</span> errors <span class="hljs-number">0</span>  dropped <span class="hljs-number">0</span> overruns <span class="hljs-number">0</span>  carrier <span class="hljs-number">0</span>  collisions <span class="hljs-number">0</span><br><br><span class="hljs-attribute">lo</span>: flags=<span class="hljs-number">73</span>&lt;UP,LOOPBACK,RUNNING&gt;  mtu <span class="hljs-number">65536</span><br>        <span class="hljs-attribute">inet</span> <span class="hljs-number">127.0.0.1</span>  netmask <span class="hljs-number">255.0.0.0</span><br>        <span class="hljs-attribute">inet6</span> ::<span class="hljs-number">1</span>  prefixlen <span class="hljs-number">128</span>  scopeid <span class="hljs-number">0</span>x10&lt;host&gt;<br>        <span class="hljs-attribute">loop</span>  txqueuelen <span class="hljs-number">1000</span>  (Local Loopback)<br>        <span class="hljs-attribute">RX</span> packets <span class="hljs-number">0</span>  bytes <span class="hljs-number">0</span> (<span class="hljs-number">0</span>.<span class="hljs-number">0</span> B)<br>        <span class="hljs-attribute">RX</span> errors <span class="hljs-number">0</span>  dropped <span class="hljs-number">0</span>  overruns <span class="hljs-number">0</span>  frame <span class="hljs-number">0</span><br>        <span class="hljs-attribute">TX</span> packets <span class="hljs-number">0</span>  bytes <span class="hljs-number">0</span> (<span class="hljs-number">0</span>.<span class="hljs-number">0</span> B)<br>        <span class="hljs-attribute">TX</span> errors <span class="hljs-number">0</span>  dropped <span class="hljs-number">0</span> overruns <span class="hljs-number">0</span>  carrier <span class="hljs-number">0</span>  collisions <span class="hljs-number">0</span><br><br><span class="hljs-attribute">virbr0</span>: flags=<span class="hljs-number">4099</span>&lt;UP,BROADCAST,MULTICAST&gt;  mtu <span class="hljs-number">1500</span><br>        <span class="hljs-attribute">inet</span> <span class="hljs-number">192.168.122.1</span>  netmask <span class="hljs-number">255.255.255.0</span>  broadcast <span class="hljs-number">192.168.122.255</span><br>        <span class="hljs-attribute">ether</span> <span class="hljs-number">52</span>:<span class="hljs-number">54</span>:<span class="hljs-number">00</span>:ea:<span class="hljs-number">8</span>a:fb  txqueuelen <span class="hljs-number">1000</span>  (Ethernet)<br>        <span class="hljs-attribute">RX</span> packets <span class="hljs-number">0</span>  bytes <span class="hljs-number">0</span> (<span class="hljs-number">0</span>.<span class="hljs-number">0</span> B)<br>        <span class="hljs-attribute">RX</span> errors <span class="hljs-number">0</span>  dropped <span class="hljs-number">0</span>  overruns <span class="hljs-number">0</span>  frame <span class="hljs-number">0</span><br>        <span class="hljs-attribute">TX</span> packets <span class="hljs-number">0</span>  bytes <span class="hljs-number">0</span> (<span class="hljs-number">0</span>.<span class="hljs-number">0</span> B)<br>        <span class="hljs-attribute">TX</span> errors <span class="hljs-number">0</span>  dropped <span class="hljs-number">0</span> overruns <span class="hljs-number">0</span>  carrier <span class="hljs-number">0</span>  collisions <span class="hljs-number">0</span><br></code></pre></td></tr></table></figure>
+
+<p>其中<code>ens33</code>，为虚拟机的以太网络接口，此处获取的ip地址为<code>172.17.0.104</code>。</p>
+</li>
+<li><p>在MobaXterm中配置SSH（Secure Shell）连接</p>
+<ul>
+<li><p>点击Session选项</p>
+<p><img src="/.io//BaiduNetdiskDownload\1.笔记\images\点击Session.png" srcset="/img/loading.gif" lazyload></p>
+</li>
+<li><p>点击SSH选项，并配置连接信息</p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\填入连接信息.png" srcset="/img/loading.gif" lazyload style="zoom:80%;">
+</li>
+<li><p>输入root用户密码</p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\输入root用户密码.png" srcset="/img/loading.gif" lazyload style="zoom:80%;">
+</li>
+<li><p>远程登录成功，如下图所示</p>
+<p><img src="/.io//BaiduNetdiskDownload\1.笔记\images\登录成功.png" srcset="/img/loading.gif" lazyload></p>
+</li>
+</ul>
+</li>
+</ol>
+<h1 id="7-虚拟机网络配置"><a href="#7-虚拟机网络配置" class="headerlink" title="7. 虚拟机网络配置"></a>7. 虚拟机网络配置</h1><h2 id="7-1-目前痛点"><a href="#7-1-目前痛点" class="headerlink" title="7.1 目前痛点"></a>7.1 目前痛点</h2><p>目前虚拟机联网方式为桥接模式，这种模式下，虚拟机通过主机的物理网卡，直接连接到主机所在的网络当中。具体效果如下图所示。</p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\VMware网络配置-桥接模式效果图.drawio.png" srcset="/img/loading.gif" lazyload style="zoom: 50%;">
+
+<p>这种模式下存在两个痛点</p>
+<ol>
+<li>主机必须连接到某个网络中，主机和虚拟机才能互通。</li>
+<li>更换网络后，主机和虚拟机的IP地址均会发生变化，因此远程访问工具中的IP需要同步进行修改。</li>
+</ol>
+<p>为解决上述痛点，我们需要调整虚拟机的网络模式和配置静态IP。</p>
+<h2 id="7-2-虚拟机网络模式"><a href="#7-2-虚拟机网络模式" class="headerlink" title="7.2 虚拟机网络模式"></a>7.2 虚拟机网络模式</h2><h3 id="7-2-1-主机网络环境"><a href="#7-2-1-主机网络环境" class="headerlink" title="7.2.1 主机网络环境"></a>7.2.1 主机网络环境</h3><p>为理解VMware中的虚拟网络模式，我们首先需要明确主机所处的真实网络环境，其所处环境如下图所示：</p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\VMware网络配置-物理网络拓扑.drawio.png" srcset="/img/loading.gif" lazyload style="zoom:50%;">
+
+<p>如上图所示，路由器一端（WAN口，Wide Area Network）连接互联网，另一端（Local Area Network，LAN）连接多个设备，这些设备组成一个局域网，局域网中的设备都通过路由器访问互联网，这个场景应该是大家十分熟悉的。下面为大家介绍路由器中的两个十分重要的角色。</p>
+<ul>
+<li><p><strong>DHCP</strong></p>
+<p>全称<strong>Dynamic Host Configuration Protocol</strong> ，动态主机配置协议，该协议用于给联网的设备自动分配（私网）IP地址和其他网络配置。家用路由器中一般就会集成DHCP服务，因此设备只要连接上路由器，便能自动获取IP地址等网络配置。</p>
+</li>
+<li><p><strong>NAT</strong></p>
+<p>全称<strong>Network Address Translation</strong>，网络地址转换，该技术主要用于缓解IPv4地址短缺，有了NAT之后，可以令多个网络设备共享一个公网IP地址，家庭路由器中也都集成了该服务。</p>
+<p>其工作原理是，NAT设备（路由器）一端连接互联网，其具有一个公网IP，另一端连接一个局域网，局域网中的每个设备均只有一个私网IP。当局域网中的设备经过路由器向互联网中的其他设备发送数据时，NAT服务会将数据包的源地址由该设备的私网IP替换为路由器的公网IP，因此互联网中的其他设备看到源地址为路由器的公网IP，所以其返回数据时，就会把路由器的公网IP设置为目标地址，路由器接收到数据之后，NAT设备再将数据的目标地址由路由器的公网IP改为原设备的私网IP，最终数据就能返回到该设备了。具体流程如下图所示</p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\NAT设备工作原理.drawio.png" srcset="/img/loading.gif" lazyload style="zoom:50%;"></li>
+</ul>
+<p>在对我们的主机所处的网络环境有了一个了解后，下面分别为大家介绍VMware中的三种网络模式。</p>
+<h3 id="7-2-2-桥接模式"><a href="#7-2-2-桥接模式" class="headerlink" title="7.2.2 桥接模式"></a>7.2.2 桥接模式</h3><p>桥接模式的原理如下图所示</p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\VMware网络配置-桥接模式.drawio.png" srcset="/img/loading.gif" lazyload style="zoom:50%;">
+
+<p>这种模式下，VMware虚拟出了一个交换机。首先，该虚拟交换机通过主机的物理网卡连接到主机所在的网络中，然后所有的虚拟机都通过虚拟交换机接入到主机所在网络中。所以在该模式下，虚拟机和主机位于同一网络中，因此在主机接入网络的前提下，虚拟机和物理机是可以互通的。</p>
+<h3 id="7-2-3-NAT模式"><a href="#7-2-3-NAT模式" class="headerlink" title="7.2.3 NAT模式"></a>7.2.3 NAT模式</h3><p>NAT模式的原理如下图所示</p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\VMware网络配置-NAT模式.drawio.png" srcset="/img/loading.gif" lazyload style="zoom:50%;">
+
+<p>这种模式下，VMware虚拟出了一个交换机，一个DHCP服务以及一个NAT服务，相当于构成了一个虚拟路由器。虚拟路由器通过主机的物理网卡连接到主机所在的网络，虚拟机则全部连接到虚拟路由器上，组成了一个子网。此时所有的虚拟机位于同一网络，因此彼此之间可以互通，但是主机不能与虚拟机互通。</p>
+<p>为使主机能够和虚拟机互通，VMware又在主机中虚拟出了一个网卡，并连接到了这个虚拟路由器中，这时主机便可虚拟机互通了。</p>
+<h3 id="7-2-4-仅主机模式"><a href="#7-2-4-仅主机模式" class="headerlink" title="7.2.4 仅主机模式"></a>7.2.4 仅主机模式</h3><p>仅主机模式的原理如下图所示</p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\VMware网络配置-仅主机模式.drawio.png" srcset="/img/loading.gif" lazyload style="zoom:50%;">
+
+<p>这种模式，和NAT模式十分相似，唯一的区别是，虚拟路由器并未连接到主机所在的网络中，因此主机和虚拟机之间可以互通，但是虚拟机不能访问互联网。</p>
+<h3 id="7-2-5-网络模式选择"><a href="#7-2-5-网络模式选择" class="headerlink" title="7.2.5 网络模式选择"></a>7.2.5 网络模式选择</h3><p>为保证主机未联网的情况下，主机和虚拟机也能实现互通；同时保证主机联网的情况下虚拟机也能访问互联网，我们最好选择上述三种模式中的NAT模式，具体配置如下。</p>
+<h4 id="7-2-5-1-VMware虚拟网络配置"><a href="#7-2-5-1-VMware虚拟网络配置" class="headerlink" title="7.2.5.1 VMware虚拟网络配置"></a>7.2.5.1 VMware虚拟网络配置</h4><ol>
+<li><p>点击VMware菜单栏中的<code>编辑</code>，选择<code>虚拟网络编辑器</code></p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\VMware虚拟网络编辑.png" srcset="/img/loading.gif" lazyload style="zoom:80%;">
+</li>
+<li><p>打开虚拟网络编辑器后，赋予管理员权限</p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\VMware虚拟网络编辑-管理员权限.png" srcset="/img/loading.gif" lazyload style="zoom:80%;">
+</li>
+<li><p>配置VMnet8子网</p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\VMware虚拟网络编辑-子网配置.png" srcset="/img/loading.gif" lazyload style="zoom:80%;">
+</li>
+<li><p>打开NAT配置界面</p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\VMware虚拟网络编辑-NAT.png" srcset="/img/loading.gif" lazyload style="zoom:80%;">
+</li>
+<li><p>修改NAT配置</p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\VMware虚拟网络编辑-NAT网关配置.png" srcset="/img/loading.gif" lazyload style="zoom:80%;">
+
+<p><strong>注意事项</strong></p>
+<p>NAT网关IP须位于VMnet8子网IP范围内。</p>
+</li>
+</ol>
+<h4 id="7-2-5-3-虚拟机选择网络模式"><a href="#7-2-5-3-虚拟机选择网络模式" class="headerlink" title="7.2.5.3 虚拟机选择网络模式"></a>7.2.5.3 虚拟机选择网络模式</h4><ol>
+<li><p>修改虚拟机所使用的网络模式</p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\虚拟机选择网络模式.png" srcset="/img/loading.gif" lazyload style="zoom:80%;">
+</li>
+<li><p>选择NAT模式</p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\虚拟机选择网络模式-NAT.png" srcset="/img/loading.gif" lazyload style="zoom:80%;"></li>
+</ol>
+<h4 id="7-2-5-2-Windows主机网络配置"><a href="#7-2-5-2-Windows主机网络配置" class="headerlink" title="7.2.5.2 Windows主机网络配置"></a>7.2.5.2 Windows主机网络配置</h4><p>上述配置中，VMware已将Windows主机连接到虚拟网络中了，此处只需查看Windows主机中的虚拟网络网卡配置是否正确即可。</p>
+<ol>
+<li><p>打开网络适配器配置面板</p>
+<p><code>Win+R</code>打开运行窗口，输入<code>ncpa.cpl</code>，然后按回车键</p>
+</li>
+<li><p>查看VMnet8虚拟网络适配器</p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\Windows主机网络适配器.png" srcset="/img/loading.gif" lazyload style="zoom:80%;">
+</li>
+<li><p>查看IpV4配置</p>
+<img src="/.io//BaiduNetdiskDownload\1.笔记\images\Windows主机网络适配器-IP配置.png" srcset="/img/loading.gif" lazyload style="zoom:80%;">
+
+<p><strong>注意事项</strong></p>
+<p>主机IP须位于VMnet8子网IP范围内。</p>
+</li>
+</ol>
+<h2 id="7-3-配置静态IP"><a href="#7-3-配置静态IP" class="headerlink" title="7.3 配置静态IP"></a>7.3 配置静态IP</h2><p>NAT模式下，虚拟机的IP地址，默认情况下是由虚拟DHCP服务自动分配的，虚拟机的IP地址不固定，这对于SSH远程访问也不友好，所以通常情况下，我们不使用虚拟DHCP服务，而是手动为虚拟机配置静态的IP地址。具体操作如下。</p>
+<ol>
+<li><p>确定网络配置文件</p>
+<p>在终端输入如下命令<code>ifconfig</code>命令，查看当前的网络接口，内容如下</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">ens33</span>: flags=<span class="hljs-number">4163</span>&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu <span class="hljs-number">1500</span><br>        <span class="hljs-attribute">inet</span> <span class="hljs-number">192.168.10.100</span>  netmask <span class="hljs-number">255.255.255.0</span>  broadcast <span class="hljs-number">192.168.10.255</span><br>        <span class="hljs-attribute">inet6</span> fe80::<span class="hljs-number">5</span>fdd:f01e:a4fb:<span class="hljs-number">966</span>  prefixlen <span class="hljs-number">64</span>  scopeid <span class="hljs-number">0</span>x20&lt;link&gt;<br>        <span class="hljs-attribute">ether</span> <span class="hljs-number">00</span>:<span class="hljs-number">0</span>c:<span class="hljs-number">29</span>:fc:a3:fe  txqueuelen <span class="hljs-number">1000</span>  (Ethernet)<br>        <span class="hljs-attribute">RX</span> packets <span class="hljs-number">1526</span>  bytes <span class="hljs-number">136998</span> (<span class="hljs-number">133</span>.<span class="hljs-number">7</span> KiB)<br>        <span class="hljs-attribute">RX</span> errors <span class="hljs-number">0</span>  dropped <span class="hljs-number">0</span>  overruns <span class="hljs-number">0</span>  frame <span class="hljs-number">0</span><br>        <span class="hljs-attribute">TX</span> packets <span class="hljs-number">1907</span>  bytes <span class="hljs-number">136735</span> (<span class="hljs-number">133</span>.<span class="hljs-number">5</span> KiB)<br>        <span class="hljs-attribute">TX</span> errors <span class="hljs-number">0</span>  dropped <span class="hljs-number">0</span> overruns <span class="hljs-number">0</span>  carrier <span class="hljs-number">0</span>  collisions <span class="hljs-number">0</span><br><br><span class="hljs-attribute">lo</span>: flags=<span class="hljs-number">73</span>&lt;UP,LOOPBACK,RUNNING&gt;  mtu <span class="hljs-number">65536</span><br>        <span class="hljs-attribute">inet</span> <span class="hljs-number">127.0.0.1</span>  netmask <span class="hljs-number">255.0.0.0</span><br>        <span class="hljs-attribute">inet6</span> ::<span class="hljs-number">1</span>  prefixlen <span class="hljs-number">128</span>  scopeid <span class="hljs-number">0</span>x10&lt;host&gt;<br>        <span class="hljs-attribute">loop</span>  txqueuelen <span class="hljs-number">1000</span>  (Local Loopback)<br>        <span class="hljs-attribute">RX</span> packets <span class="hljs-number">68</span>  bytes <span class="hljs-number">5916</span> (<span class="hljs-number">5</span>.<span class="hljs-number">7</span> KiB)<br>        <span class="hljs-attribute">RX</span> errors <span class="hljs-number">0</span>  dropped <span class="hljs-number">0</span>  overruns <span class="hljs-number">0</span>  frame <span class="hljs-number">0</span><br>        <span class="hljs-attribute">TX</span> packets <span class="hljs-number">68</span>  bytes <span class="hljs-number">5916</span> (<span class="hljs-number">5</span>.<span class="hljs-number">7</span> KiB)<br>        <span class="hljs-attribute">TX</span> errors <span class="hljs-number">0</span>  dropped <span class="hljs-number">0</span> overruns <span class="hljs-number">0</span>  carrier <span class="hljs-number">0</span>  collisions <span class="hljs-number">0</span><br><br><span class="hljs-attribute">virbr0</span>: flags=<span class="hljs-number">4099</span>&lt;UP,BROADCAST,MULTICAST&gt;  mtu <span class="hljs-number">1500</span><br>        <span class="hljs-attribute">inet</span> <span class="hljs-number">192.168.122.1</span>  netmask <span class="hljs-number">255.255.255.0</span>  broadcast <span class="hljs-number">192.168.122.255</span><br>        <span class="hljs-attribute">ether</span> <span class="hljs-number">52</span>:<span class="hljs-number">54</span>:<span class="hljs-number">00</span>:ea:<span class="hljs-number">8</span>a:fb  txqueuelen <span class="hljs-number">1000</span>  (Ethernet)<br>        <span class="hljs-attribute">RX</span> packets <span class="hljs-number">0</span>  bytes <span class="hljs-number">0</span> (<span class="hljs-number">0</span>.<span class="hljs-number">0</span> B)<br>        <span class="hljs-attribute">RX</span> errors <span class="hljs-number">0</span>  dropped <span class="hljs-number">0</span>  overruns <span class="hljs-number">0</span>  frame <span class="hljs-number">0</span><br>        <span class="hljs-attribute">TX</span> packets <span class="hljs-number">0</span>  bytes <span class="hljs-number">0</span> (<span class="hljs-number">0</span>.<span class="hljs-number">0</span> B)<br>        <span class="hljs-attribute">TX</span> errors <span class="hljs-number">0</span>  dropped <span class="hljs-number">0</span> overruns <span class="hljs-number">0</span>  carrier <span class="hljs-number">0</span>  collisions <span class="hljs-number">0</span><br></code></pre></td></tr></table></figure>
+
+<p>其中ens33是目前的以太网接口，故其配置文件为<code>vim /etc/sysconfig/network-scripts/ifcfg-ens33</code>。</p>
+</li>
+<li><p>修改网络配置文件</p>
+<p>打开配置文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">[root@localhost ~]# vim /etc/sysconfig/network-scripts/ifcfg-ens33 <br></code></pre></td></tr></table></figure>
+
+<p>内容如下</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-attr">TYPE</span>=Ethernet<br><span class="hljs-attr">PROXY_METHOD</span>=none<br><span class="hljs-attr">BROWSER_ONLY</span>=<span class="hljs-literal">no</span><br><span class="hljs-attr">BOOTPROTO</span>=dhcp<br><span class="hljs-attr">DEFROUTE</span>=<span class="hljs-literal">yes</span><br><span class="hljs-attr">IPV4_FAILURE_FATAL</span>=<span class="hljs-literal">no</span><br><span class="hljs-attr">IPV6INIT</span>=<span class="hljs-literal">yes</span><br><span class="hljs-attr">IPV6_AUTOCONF</span>=<span class="hljs-literal">yes</span><br><span class="hljs-attr">IPV6_DEFROUTE</span>=<span class="hljs-literal">yes</span><br><span class="hljs-attr">IPV6_FAILURE_FATAL</span>=<span class="hljs-literal">no</span><br><span class="hljs-attr">IPV6_ADDR_GEN_MODE</span>=stable-privacy<br><span class="hljs-attr">NAME</span>=ens33<br><span class="hljs-attr">UUID</span>=bf788989-e095-<span class="hljs-number">4</span>e58-<span class="hljs-number">865</span>a-e6b07248a514<br><span class="hljs-attr">DEVICE</span>=ens33<br><span class="hljs-attr">ONBOOT</span>=<span class="hljs-literal">yes</span><br></code></pre></td></tr></table></figure>
+
+<p>需要修改的内容如下</p>
+<ul>
+<li><p>修改<code>BOOTPROTO</code>参数为<code>static</code></p>
+</li>
+<li><p>修改<code>ONBOOT</code>参数为<code>yes</code></p>
+</li>
+<li><p>增加如下内容</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-attr">IPADDR</span>=<span class="hljs-number">192.168</span>.<span class="hljs-number">10.100</span><br><span class="hljs-attr">NETMASK</span>=<span class="hljs-number">255.255</span>.<span class="hljs-number">255.0</span><br><span class="hljs-attr">GATEWAY</span>=<span class="hljs-number">192.168</span>.<span class="hljs-number">10.2</span><br><span class="hljs-attr">DNS1</span>=<span class="hljs-number">192.168</span>.<span class="hljs-number">10.2</span><br></code></pre></td></tr></table></figure>
+
+<p><strong>注意事项</strong></p>
+<p><code>IPADDR</code>需要位于前文VMnet8子网IP范围内，<code>GATEWAY</code>需要配置为前文的NAT服务的网管IP。</p>
+</li>
+</ul>
+</li>
+<li><p>重新启动网络服务</p>
+<p>在终端执行以下命令，重启network服务</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">[root@localhost ~]# systemctl restart network<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>观察网络配置是否生效</p>
+<p>在终端执行<code>ifoconfig</code>命令，观察<code>ens33</code>的网络接口的IP地址是否为前文所配置的<code>IPADDR</code>。1</p>
+</li>
+</ol>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="../../../../tags/%E6%B5%8B%E8%AF%95%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/" class="print-no-link">#测试开发学习</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Linux基础</div>
+      <div>https://codingerxzj.github.io/2025/06/17/Linux基础/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>Author</div>
+          <div>codingerxzj</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>Posted on</div>
+          <div>June 17, 2025</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>Licensed under</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - Attribution">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="../../15/%E5%A6%82%E4%BD%95%E6%9B%B4%E5%A5%BD%E7%9A%84%E5%8F%91%E7%8E%B0bug/" title="如何更好的发现bug">
+                        <span class="hidden-mobile">如何更好的发现bug</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>Table of Contents</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">Keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="../../../../js/events.js" ></script>
+<script  src="../../../../js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="../../../../js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="../../../../js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="../../../../js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">Blog works best with JavaScript enabled</div>
+  </noscript>
+</body>
+</html>
